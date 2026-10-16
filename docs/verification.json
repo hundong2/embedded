@@ -1,0 +1,77 @@
+{
+  "schemaVersion": 1,
+  "verifiedAt": "2026-10-16T13:03:59.517Z",
+  "commands": {
+    "npm run validate:content": "passed",
+    "node scripts/build-graph.mjs --check": "passed",
+    "npm test": {
+      "passed": 27,
+      "failed": 0,
+      "contentContract": 11,
+      "numericalModels": 16
+    }
+  },
+  "curriculum": {
+    "lessons": 72,
+    "visuals": 72,
+    "visualNodes": 286,
+    "visualEdges": 231
+  },
+  "inventory": {
+    "path": "public/data/source-manifest.json",
+    "sha256": "9928ea014c1f7d66fcda2a52ac69d672866291d35001faefb6b733c628b20aea",
+    "bytes": 319921,
+    "counts": {
+      "discoveredUrls": 211,
+      "processedUrls": 211,
+      "articles": 210,
+      "accessible": 207,
+      "unavailable": 3,
+      "reviewed": 156,
+      "mapped": 156,
+      "pending": 3,
+      "excluded": 51,
+      "externalLinks": 97,
+      "externalChecked": 97,
+      "externalHttpAccessible": 63,
+      "externalTopicMapped": 88,
+      "supplementalReviewed": 9
+    },
+    "externalReviewScope": "97 discovered external links have first-response checks only; nine supplemental primary sources have separate content-review records."
+  },
+  "graph": {
+    "path": "public/data/knowledge-graph.json",
+    "sha256": "462fa3f057fb2e1a0ac94fb5a1219a1270128be2716dfe033dd60709ce65d20d",
+    "bytes": 129771,
+    "nodes": 243,
+    "nodeTypes": {
+      "category": 6,
+      "lesson": 72,
+      "source": 165
+    },
+    "edges": 466,
+    "edgeTypes": {
+      "citation": 277,
+      "contains": 72,
+      "prerequisite": 117
+    }
+  },
+  "architectureReceipt": "docs/architecture-receipt.json",
+  "productBrowserEvidence": {
+    "source": "Parent task QA report",
+    "fullSuite": {
+      "passed": 18,
+      "failed": 0,
+      "scope": "72 lesson deep links on desktop and 390 px mobile plus keyboard, reduced-motion, persistence, routing and experiment journeys"
+    },
+    "targetedSourcePanel": {
+      "passed": 2,
+      "failed": 0
+    }
+  },
+  "knownSourceLimits": {
+    "unavailableBlogArticles": 3,
+    "excludedBlogArticles": 51,
+    "unreviewedDiscoveredExternalLinks": 97
+  }
+}

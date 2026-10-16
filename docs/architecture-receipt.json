@@ -1,0 +1,53 @@
+{
+  "schemaVersion": 1,
+  "diagramType": "architecture",
+  "specification": {
+    "path": "docs/architecture.json",
+    "sha256": "3f33d8c8a5dadad13fb74dc446271d9419230fa6cf00c9eba4f88c190d17ef7e",
+    "bytes": 2435
+  },
+  "artifact": {
+    "path": "public/architecture.html",
+    "sha256": "3212026167958e4c17980806b69a322fbb14614ae6dc67ead38413deef756c7b",
+    "bytes": 710956
+  },
+  "validation": {
+    "command": "deliver",
+    "profile": "showcase",
+    "passed": 9,
+    "total": 9,
+    "errors": 0,
+    "warnings": 0
+  },
+  "browserEvidence": {
+    "command": "visual-check",
+    "status": "failed",
+    "attempts": 2,
+    "reason": "Page.loadEventFired: event timed out after 15000ms"
+  },
+  "supplementaryBrowserEvidence": {
+    "kind": "playwright",
+    "artifactSha256": "3212026167958e4c17980806b69a322fbb14614ae6dc67ead38413deef756c7b",
+    "artifactBytes": 710956,
+    "containment": [
+      { "width": 1440, "height": 900, "scrollWidth": 1440, "scrollHeight": 900 },
+      { "width": 1600, "height": 1000, "scrollWidth": 1600, "scrollHeight": 1000 },
+      { "width": 1920, "height": 1080, "scrollWidth": 1920, "scrollHeight": 1080 },
+      { "width": 2048, "height": 1320, "scrollWidth": 2048, "scrollHeight": 1320 }
+    ],
+    "captures": {
+      "viewports": [[1440, 900], [2048, 1320]],
+      "themes": ["light", "dark"],
+      "directory": "artifacts/"
+    },
+    "interactions": ["theme toggle", "node focus", "semantic passport close with Escape", "Korean node search filters 8 nodes to 1", "SVG download contains diagram title and no HTML buttons or foreignObject"]
+  },
+  "visualReview": "passed",
+  "visualReviewNotes": "Image-capable review of both endpoint viewports in light and dark themes: readable labels, clear routes, no clipped content or oversized empty lower band.",
+  "correctionRounds": 0,
+  "language": {
+    "authored": "ko",
+    "fixedViewerUi": "en",
+    "htmlLang": "en"
+  }
+}

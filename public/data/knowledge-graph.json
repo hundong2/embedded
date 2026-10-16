@@ -1,0 +1,4330 @@
+{
+  "schemaVersion": 1,
+  "generatedFrom": [
+    "src/data/lessons.js"
+  ],
+  "nodes": [
+    {
+      "id": "category:components",
+      "type": "category",
+      "label": "소자와 회로"
+    },
+    {
+      "id": "category:digital",
+      "type": "category",
+      "label": "디지털 신호"
+    },
+    {
+      "id": "category:electricity",
+      "type": "category",
+      "label": "전기의 기초"
+    },
+    {
+      "id": "category:firmware",
+      "type": "category",
+      "label": "펌웨어와 개발 도구"
+    },
+    {
+      "id": "category:interfaces",
+      "type": "category",
+      "label": "통신과 인터페이스"
+    },
+    {
+      "id": "category:mcu",
+      "type": "category",
+      "label": "마이크로컨트롤러"
+    },
+    {
+      "id": "current-loop",
+      "type": "lesson",
+      "label": "전류는 어디로 흐를까?",
+      "category": "electricity",
+      "experiment": "current"
+    },
+    {
+      "id": "ground-reference",
+      "type": "lesson",
+      "label": "그라운드는 전류의 목적지가 아니다",
+      "category": "electricity",
+      "experiment": "current"
+    },
+    {
+      "id": "ohms-law",
+      "type": "lesson",
+      "label": "저항과 옴의 법칙",
+      "category": "electricity",
+      "experiment": "ohm"
+    },
+    {
+      "id": "series-parallel",
+      "type": "lesson",
+      "label": "직렬과 병렬, 전류가 나뉘는 길",
+      "category": "electricity",
+      "experiment": "ohm"
+    },
+    {
+      "id": "voltage-divider",
+      "type": "lesson",
+      "label": "두 저항으로 전압 나누기",
+      "category": "electricity",
+      "experiment": "ohm"
+    },
+    {
+      "id": "electrical-power",
+      "type": "lesson",
+      "label": "전류를 알면 발열도 보인다",
+      "category": "electricity",
+      "experiment": "ohm"
+    },
+    {
+      "id": "signals-frequency",
+      "type": "lesson",
+      "label": "파형을 시간과 주파수로 보기",
+      "category": "electricity",
+      "experiment": "pwm"
+    },
+    {
+      "id": "capacitor",
+      "type": "lesson",
+      "label": "캐패시터는 전압 변화를 기억한다",
+      "category": "components",
+      "experiment": "rc"
+    },
+    {
+      "id": "rc-transient",
+      "type": "lesson",
+      "label": "RC 충전과 방전, 시간 상수",
+      "category": "components",
+      "experiment": "rc"
+    },
+    {
+      "id": "rc-filter",
+      "type": "lesson",
+      "label": "저역·고역 통과와 미분·적분",
+      "category": "components",
+      "experiment": "rc"
+    },
+    {
+      "id": "inductor",
+      "type": "lesson",
+      "label": "인덕터는 전류 변화를 버틴다",
+      "category": "components",
+      "experiment": "rc"
+    },
+    {
+      "id": "diode-led",
+      "type": "lesson",
+      "label": "다이오드와 LED의 방향",
+      "category": "components",
+      "experiment": "ohm"
+    },
+    {
+      "id": "zener-power",
+      "type": "lesson",
+      "label": "제너와 전압 제한",
+      "category": "components",
+      "experiment": "ohm"
+    },
+    {
+      "id": "transistor-switch",
+      "type": "lesson",
+      "label": "트랜지스터로 스위치 만들기",
+      "category": "components",
+      "experiment": "current"
+    },
+    {
+      "id": "transistor-amplifier",
+      "type": "lesson",
+      "label": "증폭기, 바이어스, 동작 곡선",
+      "category": "components",
+      "experiment": "ohm"
+    },
+    {
+      "id": "decoupling",
+      "type": "lesson",
+      "label": "전원 옆 캐패시터의 이유",
+      "category": "components",
+      "experiment": "rc"
+    },
+    {
+      "id": "logic-levels",
+      "type": "lesson",
+      "label": "0과 1 사이에는 금지 구간이 있다",
+      "category": "digital",
+      "experiment": "logic"
+    },
+    {
+      "id": "floating-input",
+      "type": "lesson",
+      "label": "떠 있는 GPIO에는 기준이 없다",
+      "category": "digital",
+      "experiment": "pull"
+    },
+    {
+      "id": "pull-up",
+      "type": "lesson",
+      "label": "풀업: 놓으면 1, 누르면 0",
+      "category": "digital",
+      "experiment": "pull"
+    },
+    {
+      "id": "pull-down",
+      "type": "lesson",
+      "label": "풀다운: 놓으면 0, 누르면 1",
+      "category": "digital",
+      "experiment": "pull"
+    },
+    {
+      "id": "pull-sizing",
+      "type": "lesson",
+      "label": "풀 저항은 왜 너무 크거나 작으면 안 될까?",
+      "category": "digital",
+      "experiment": "pull"
+    },
+    {
+      "id": "open-drain",
+      "type": "lesson",
+      "label": "오픈드레인: 0 또는 놓아주기",
+      "category": "digital",
+      "experiment": "pull"
+    },
+    {
+      "id": "switch-debounce",
+      "type": "lesson",
+      "label": "버튼은 한 번 눌러도 여러 번 튄다",
+      "category": "digital",
+      "experiment": "rc"
+    },
+    {
+      "id": "logic-gates",
+      "type": "lesson",
+      "label": "논리 게이트에서 계산으로",
+      "category": "digital",
+      "experiment": "logic"
+    },
+    {
+      "id": "registers",
+      "type": "lesson",
+      "label": "레지스터는 비트를 기억한다",
+      "category": "digital",
+      "experiment": "logic"
+    },
+    {
+      "id": "timing",
+      "type": "lesson",
+      "label": "타이밍 표와 데이터시트 읽기",
+      "category": "digital",
+      "experiment": "protocol"
+    },
+    {
+      "id": "core-soc",
+      "type": "lesson",
+      "label": "CPU, 코어, MCU, SoC의 지도",
+      "category": "mcu",
+      "experiment": "memory"
+    },
+    {
+      "id": "cpu-pipeline",
+      "type": "lesson",
+      "label": "CPU의 읽기·해석·실행",
+      "category": "mcu",
+      "experiment": "memory"
+    },
+    {
+      "id": "arm-modes",
+      "type": "lesson",
+      "label": "ARM 모드와 명령어 상태",
+      "category": "mcu",
+      "experiment": "memory"
+    },
+    {
+      "id": "arm-context",
+      "type": "lesson",
+      "label": "컨텍스트와 함수 호출 규약",
+      "category": "mcu",
+      "experiment": "memory"
+    },
+    {
+      "id": "exceptions",
+      "type": "lesson",
+      "label": "예외 벡터와 핸들러",
+      "category": "mcu",
+      "experiment": "protocol"
+    },
+    {
+      "id": "clocks-pll",
+      "type": "lesson",
+      "label": "클록, 분주기, PLL",
+      "category": "mcu",
+      "experiment": "pwm"
+    },
+    {
+      "id": "flash-ram",
+      "type": "lesson",
+      "label": "Flash, RAM, SDRAM, XIP",
+      "category": "mcu",
+      "experiment": "memory"
+    },
+    {
+      "id": "memory-bus",
+      "type": "lesson",
+      "label": "주소·데이터·제어선과 Wait State",
+      "category": "mcu",
+      "experiment": "protocol"
+    },
+    {
+      "id": "mmio",
+      "type": "lesson",
+      "label": "주소에 값을 쓰면 장치가 움직인다",
+      "category": "mcu",
+      "experiment": "logic"
+    },
+    {
+      "id": "gpio",
+      "type": "lesson",
+      "label": "GPIO의 입력·출력·하이임피던스",
+      "category": "mcu",
+      "experiment": "pull"
+    },
+    {
+      "id": "interrupts",
+      "type": "lesson",
+      "label": "인터럽트와 폴링",
+      "category": "mcu",
+      "experiment": "protocol"
+    },
+    {
+      "id": "dma-cache-mmu",
+      "type": "lesson",
+      "label": "DMA, 캐시, MMU가 만나는 곳",
+      "category": "mcu",
+      "experiment": "memory"
+    },
+    {
+      "id": "serial-uart",
+      "type": "lesson",
+      "label": "UART의 시작 비트와 한 바이트",
+      "category": "interfaces",
+      "experiment": "protocol"
+    },
+    {
+      "id": "buses-i2c-spi",
+      "type": "lesson",
+      "label": "I²C와 SPI, 공유 선의 약속",
+      "category": "interfaces",
+      "experiment": "protocol"
+    },
+    {
+      "id": "adc",
+      "type": "lesson",
+      "label": "ADC: 전압을 숫자로 바꾸기",
+      "category": "interfaces",
+      "experiment": "adc"
+    },
+    {
+      "id": "pwm",
+      "type": "lesson",
+      "label": "PWM: 켜짐 비율로 조절하기",
+      "category": "interfaces",
+      "experiment": "pwm"
+    },
+    {
+      "id": "lcd",
+      "type": "lesson",
+      "label": "LCD의 명령·데이터·프레임버퍼",
+      "category": "interfaces",
+      "experiment": "memory"
+    },
+    {
+      "id": "debug-jtag",
+      "type": "lesson",
+      "label": "JTAG, SWD, 소스 수준 디버깅",
+      "category": "interfaces",
+      "experiment": "memory"
+    },
+    {
+      "id": "endian",
+      "type": "lesson",
+      "label": "엔디언: 여러 바이트를 놓는 순서",
+      "category": "firmware",
+      "experiment": "memory"
+    },
+    {
+      "id": "c-memory",
+      "type": "lesson",
+      "label": "변수의 수명과 스택·힙",
+      "category": "firmware",
+      "experiment": "memory"
+    },
+    {
+      "id": "pointers-structs",
+      "type": "lesson",
+      "label": "포인터·배열·구조체의 실제 배치",
+      "category": "firmware",
+      "experiment": "memory"
+    },
+    {
+      "id": "compile-pipeline",
+      "type": "lesson",
+      "label": "C 코드가 실행 이미지가 되기까지",
+      "category": "firmware",
+      "experiment": "protocol"
+    },
+    {
+      "id": "asm-abi",
+      "type": "lesson",
+      "label": "어셈블리와 C의 경계",
+      "category": "firmware",
+      "experiment": "memory"
+    },
+    {
+      "id": "libraries",
+      "type": "lesson",
+      "label": "라이브러리와 심볼 연결",
+      "category": "firmware",
+      "experiment": "protocol"
+    },
+    {
+      "id": "linker-map",
+      "type": "lesson",
+      "label": "링커 스크립트와 메모리 지도",
+      "category": "firmware",
+      "experiment": "memory"
+    },
+    {
+      "id": "make-build",
+      "type": "lesson",
+      "label": "Make와 의존성 그래프",
+      "category": "firmware",
+      "experiment": "protocol"
+    },
+    {
+      "id": "reset-boot",
+      "type": "lesson",
+      "label": "리셋에서 main까지",
+      "category": "firmware",
+      "experiment": "protocol"
+    },
+    {
+      "id": "rtos-tasks",
+      "type": "lesson",
+      "label": "무한 루프에서 태스크로",
+      "category": "firmware",
+      "experiment": "protocol"
+    },
+    {
+      "id": "scheduler",
+      "type": "lesson",
+      "label": "우선순위와 컨텍스트 스위칭",
+      "category": "firmware",
+      "experiment": "protocol"
+    },
+    {
+      "id": "synchronization",
+      "type": "lesson",
+      "label": "원자성, 임계 구역, 뮤텍스와 세마포어",
+      "category": "firmware",
+      "experiment": "protocol"
+    },
+    {
+      "id": "queues",
+      "type": "lesson",
+      "label": "큐·연결 리스트·태스크 간 통신",
+      "category": "firmware",
+      "experiment": "memory"
+    },
+    {
+      "id": "timers-watchdog",
+      "type": "lesson",
+      "label": "타이머 서비스와 워치독",
+      "category": "firmware",
+      "experiment": "pwm"
+    },
+    {
+      "id": "porting-bsp",
+      "type": "lesson",
+      "label": "보드를 바꾸면 무엇을 포팅할까?",
+      "category": "firmware",
+      "experiment": "protocol"
+    },
+    {
+      "id": "debugging",
+      "type": "lesson",
+      "label": "증상에서 근거로, 디버깅 루프",
+      "category": "firmware",
+      "experiment": "memory"
+    },
+    {
+      "id": "impedance",
+      "type": "lesson",
+      "label": "입력·출력 임피던스와 부하 효과",
+      "category": "components",
+      "experiment": "ohm"
+    },
+    {
+      "id": "power-regulators",
+      "type": "lesson",
+      "label": "LDO, Buck, Boost와 PMIC",
+      "category": "components",
+      "experiment": "ohm"
+    },
+    {
+      "id": "charge-pump",
+      "type": "lesson",
+      "label": "차지 펌프: 캐패시터를 번갈아 연결하기",
+      "category": "components",
+      "experiment": "rc"
+    },
+    {
+      "id": "signal-integrity",
+      "type": "lesson",
+      "label": "오버슈트·언더슈트와 빠른 에지",
+      "category": "digital",
+      "experiment": "pwm"
+    },
+    {
+      "id": "usb-basics",
+      "type": "lesson",
+      "label": "USB 연결부터 Descriptor까지",
+      "category": "interfaces",
+      "experiment": "protocol"
+    },
+    {
+      "id": "linux-process",
+      "type": "lesson",
+      "label": "프로세스·스레드·좀비",
+      "category": "firmware",
+      "experiment": "protocol"
+    },
+    {
+      "id": "android-stack",
+      "type": "lesson",
+      "label": "Android 플랫폼과 Zygote",
+      "category": "firmware",
+      "experiment": "protocol"
+    },
+    {
+      "id": "device-drivers",
+      "type": "lesson",
+      "label": "디바이스 드라이버와 OS 계층",
+      "category": "firmware",
+      "experiment": "protocol"
+    },
+    {
+      "id": "object-model",
+      "type": "lesson",
+      "label": "객체와 C/C++ 경계의 비용",
+      "category": "firmware",
+      "experiment": "memory"
+    },
+    {
+      "id": "dynamic-allocation",
+      "type": "lesson",
+      "label": "동적 할당·단편화·메모리 풀",
+      "category": "firmware",
+      "experiment": "memory"
+    },
+    {
+      "id": "memory-protection",
+      "type": "lesson",
+      "label": "MMU와 MPU, 주소와 접근 권한",
+      "category": "mcu",
+      "experiment": "memory"
+    },
+    {
+      "id": "dev-environment",
+      "type": "lesson",
+      "label": "개발 환경·버전 관리·재현성",
+      "category": "firmware",
+      "experiment": "protocol"
+    },
+    {
+      "id": "source:https://cdn.kernel.org/doc/html/latest/driver-api/driver-model/overview.html",
+      "type": "source",
+      "label": "Linux Kernel — The Linux Kernel Device Model",
+      "url": "https://cdn.kernel.org/doc/html/latest/driver-api/driver-model/overview.html"
+    },
+    {
+      "id": "source:https://learn.microsoft.com/en-us/windows-hardware/drivers/usbcon/usb-device-descriptors",
+      "type": "source",
+      "label": "Microsoft — USB Device Descriptors",
+      "url": "https://learn.microsoft.com/en-us/windows-hardware/drivers/usbcon/usb-device-descriptors"
+    },
+    {
+      "id": "source:https://man7.org/linux/man-pages/man2/wait.2.html",
+      "type": "source",
+      "label": "Linux man-pages — wait(2)",
+      "url": "https://man7.org/linux/man-pages/man2/wait.2.html"
+    },
+    {
+      "id": "source:https://recipes.tistory.com/192",
+      "type": "source",
+      "label": "임베디드 시스템이 뭐죠?",
+      "url": "https://recipes.tistory.com/192"
+    },
+    {
+      "id": "source:https://recipes.tistory.com/193",
+      "type": "source",
+      "label": "왜 임베디드 시스템에서는 씨( C)언어를 가장 많이 사용하나요?",
+      "url": "https://recipes.tistory.com/193"
+    },
+    {
+      "id": "source:https://recipes.tistory.com/194",
+      "type": "source",
+      "label": "어떤 공부부터 시작해야 될지 모르겠어요?",
+      "url": "https://recipes.tistory.com/194"
+    },
+    {
+      "id": "source:https://recipes.tistory.com/195",
+      "type": "source",
+      "label": "학교에서 공부한 내용이 현업에서 어떻게 쓰이나요?",
+      "url": "https://recipes.tistory.com/195"
+    },
+    {
+      "id": "source:https://recipes.tistory.com/199",
+      "type": "source",
+      "label": "LED를 ON/OFF 제어하려면?",
+      "url": "https://recipes.tistory.com/199"
+    },
+    {
+      "id": "source:https://recipes.tistory.com/200",
+      "type": "source",
+      "label": "코어(Core)와 시피유(CPU) 차이점이 뭘까요?",
+      "url": "https://recipes.tistory.com/200"
+    },
+    {
+      "id": "source:https://recipes.tistory.com/202",
+      "type": "source",
+      "label": "시피유(CPU)가 하는 일이 뭐죠",
+      "url": "https://recipes.tistory.com/202"
+    },
+    {
+      "id": "source:https://recipes.tistory.com/203",
+      "type": "source",
+      "label": "코프로세서가 하는 일이 뭐죠?",
+      "url": "https://recipes.tistory.com/203"
+    },
+    {
+      "id": "source:https://recipes.tistory.com/204",
+      "type": "source",
+      "label": "캐시메모리(Cache Memory)가 뭐죠?",
+      "url": "https://recipes.tistory.com/204"
+    },
+    {
+      "id": "source:https://recipes.tistory.com/205",
+      "type": "source",
+      "label": "노어플래시(NOR Flash)가 뭐죠?",
+      "url": "https://recipes.tistory.com/205"
+    },
+    {
+      "id": "source:https://recipes.tistory.com/206",
+      "type": "source",
+      "label": "낸드플래시(NAND Flash)가 뭐죠?",
+      "url": "https://recipes.tistory.com/206"
+    },
+    {
+      "id": "source:https://recipes.tistory.com/207",
+      "type": "source",
+      "label": "에스디램(SDRAM)이 뭐죠?",
+      "url": "https://recipes.tistory.com/207"
+    },
+    {
+      "id": "source:https://recipes.tistory.com/208",
+      "type": "source",
+      "label": "인터럽트(Interrupt)가 뭐죠?",
+      "url": "https://recipes.tistory.com/208"
+    },
+    {
+      "id": "source:https://recipes.tistory.com/209",
+      "type": "source",
+      "label": "제이텍(JTAG)이 뭐죠?",
+      "url": "https://recipes.tistory.com/209"
+    },
+    {
+      "id": "source:https://recipes.tistory.com/210",
+      "type": "source",
+      "label": "시리얼 포트(Serial port)가 뭐죠?",
+      "url": "https://recipes.tistory.com/210"
+    },
+    {
+      "id": "source:https://recipes.tistory.com/211",
+      "type": "source",
+      "label": "엘시디가 뭐죠?",
+      "url": "https://recipes.tistory.com/211"
+    },
+    {
+      "id": "source:https://recipes.tistory.com/212",
+      "type": "source",
+      "label": "크로스 컴파일러(Cross Compiler)가 뭐죠?",
+      "url": "https://recipes.tistory.com/212"
+    },
+    {
+      "id": "source:https://recipes.tistory.com/213",
+      "type": "source",
+      "label": "스타트업(Startup.S) 파일이 뭐죠?",
+      "url": "https://recipes.tistory.com/213"
+    },
+    {
+      "id": "source:https://recipes.tistory.com/214",
+      "type": "source",
+      "label": "메이크 파일(Makefile)이 뭐죠?",
+      "url": "https://recipes.tistory.com/214"
+    },
+    {
+      "id": "source:https://recipes.tistory.com/215",
+      "type": "source",
+      "label": "링커 스크립트(Linker Script) 파일이 뭐죠?",
+      "url": "https://recipes.tistory.com/215"
+    },
+    {
+      "id": "source:https://recipes.tistory.com/216",
+      "type": "source",
+      "label": "씨 언어에서 변수는 어디에 저장 되나요?",
+      "url": "https://recipes.tistory.com/216"
+    },
+    {
+      "id": "source:https://recipes.tistory.com/217",
+      "type": "source",
+      "label": "씨 언어에서 씨 플러스플러스 함수를 콜하는 방법은?",
+      "url": "https://recipes.tistory.com/217"
+    },
+    {
+      "id": "source:https://recipes.tistory.com/218",
+      "type": "source",
+      "label": "인라인 어셈블러를 사용하려면?",
+      "url": "https://recipes.tistory.com/218"
+    },
+    {
+      "id": "source:https://recipes.tistory.com/219",
+      "type": "source",
+      "label": "소스 레벨 디버깅이 뭐죠?",
+      "url": "https://recipes.tistory.com/219"
+    },
+    {
+      "id": "source:https://recipes.tistory.com/220",
+      "type": "source",
+      "label": "엠엠유(MMU)를 인에이블(Enable)하려면?",
+      "url": "https://recipes.tistory.com/220"
+    },
+    {
+      "id": "source:https://recipes.tistory.com/221",
+      "type": "source",
+      "label": "캐시를 인에이블(Enable) 하려면?",
+      "url": "https://recipes.tistory.com/221"
+    },
+    {
+      "id": "source:https://recipes.tistory.com/222",
+      "type": "source",
+      "label": "모놀리틱 커널(Monolithic kernel)과 마이크로 커널(Micro kernel) 차이점은?",
+      "url": "https://recipes.tistory.com/222"
+    },
+    {
+      "id": "source:https://recipes.tistory.com/223",
+      "type": "source",
+      "label": "임베디드 오에스(OS)의 용어 정의",
+      "url": "https://recipes.tistory.com/223"
+    },
+    {
+      "id": "source:https://recipes.tistory.com/224",
+      "type": "source",
+      "label": "ARM 프로세서에 uC/OS2 포팅을 위한 준비사항은?",
+      "url": "https://recipes.tistory.com/224"
+    },
+    {
+      "id": "source:https://recipes.tistory.com/225",
+      "type": "source",
+      "label": "uC/OS2 포팅 완료까지의 절차가 어떻게 되죠?",
+      "url": "https://recipes.tistory.com/225"
+    },
+    {
+      "id": "source:https://recipes.tistory.com/226",
+      "type": "source",
+      "label": "ARM 프로세서에 Linux 포팅을 위한 준비사항은?",
+      "url": "https://recipes.tistory.com/226"
+    },
+    {
+      "id": "source:https://recipes.tistory.com/228",
+      "type": "source",
+      "label": "Linux 포팅 완료까지의 절차가 어떻게 되죠?",
+      "url": "https://recipes.tistory.com/228"
+    },
+    {
+      "id": "source:https://recipes.tistory.com/229",
+      "type": "source",
+      "label": "Linux에서 라이브러리를 만드는 방법은?",
+      "url": "https://recipes.tistory.com/229"
+    },
+    {
+      "id": "source:https://recipes.tistory.com/230",
+      "type": "source",
+      "label": "ARM 프로세서에 WinCE 포팅을 위한 준비사항은?",
+      "url": "https://recipes.tistory.com/230"
+    },
+    {
+      "id": "source:https://recipes.tistory.com/231",
+      "type": "source",
+      "label": "WINCE 포팅 완료까지의 절차가 어떻게 되죠?",
+      "url": "https://recipes.tistory.com/231"
+    },
+    {
+      "id": "source:https://recipes.tistory.com/232",
+      "type": "source",
+      "label": "WINCE에서 어플리케이션과 DLL을 만드는 방법은?",
+      "url": "https://recipes.tistory.com/232"
+    },
+    {
+      "id": "source:https://recipes.tistory.com/233",
+      "type": "source",
+      "label": "ARM 프로세서가 많이 쓰이는 이유는?",
+      "url": "https://recipes.tistory.com/233"
+    },
+    {
+      "id": "source:https://recipes.tistory.com/234",
+      "type": "source",
+      "label": "ARM Mode와 PSR..너희들은 누구냐?",
+      "url": "https://recipes.tistory.com/234"
+    },
+    {
+      "id": "source:https://recipes.tistory.com/235",
+      "type": "source",
+      "label": "R13, R14에게 반했다?",
+      "url": "https://recipes.tistory.com/235"
+    },
+    {
+      "id": "source:https://recipes.tistory.com/236",
+      "type": "source",
+      "label": "파이프 라인(Pipe Line)의 법칙?",
+      "url": "https://recipes.tistory.com/236"
+    },
+    {
+      "id": "source:https://recipes.tistory.com/237",
+      "type": "source",
+      "label": "우리는패밀리 (ARM, THUMB, Coprocessor, NEON)",
+      "url": "https://recipes.tistory.com/237"
+    },
+    {
+      "id": "source:https://recipes.tistory.com/238",
+      "type": "source",
+      "label": "bitbucket에 ssh public key를 등록하는 법",
+      "url": "https://recipes.tistory.com/238"
+    },
+    {
+      "id": "source:https://recipes.tistory.com/264",
+      "type": "source",
+      "label": "Crack Me",
+      "url": "https://recipes.tistory.com/264"
+    },
+    {
+      "id": "source:https://recipes.tistory.com/272",
+      "type": "source",
+      "label": "핵연료봉 경보기",
+      "url": "https://recipes.tistory.com/272"
+    },
+    {
+      "id": "source:https://recipes.tistory.com/284",
+      "type": "source",
+      "label": "Hardware 꼴라쥬",
+      "url": "https://recipes.tistory.com/284"
+    },
+    {
+      "id": "source:https://recipes.tistory.com/285",
+      "type": "source",
+      "label": "신호와 주파수 영역 Specturm Analysis",
+      "url": "https://recipes.tistory.com/285"
+    },
+    {
+      "id": "source:https://recipes.tistory.com/286",
+      "type": "source",
+      "label": "Analog신호와 Digital 신호, 그리고 Ground.",
+      "url": "https://recipes.tistory.com/286"
+    },
+    {
+      "id": "source:https://recipes.tistory.com/287",
+      "type": "source",
+      "label": "초간단 회로이론 R (저항) L (인덕터) C (캐패시터)",
+      "url": "https://recipes.tistory.com/287"
+    },
+    {
+      "id": "source:https://recipes.tistory.com/288",
+      "type": "source",
+      "label": "초간단 회로이론 응용 - 필터 (Filter)",
+      "url": "https://recipes.tistory.com/288"
+    },
+    {
+      "id": "source:https://recipes.tistory.com/289",
+      "type": "source",
+      "label": "Transistor 1%",
+      "url": "https://recipes.tistory.com/289"
+    },
+    {
+      "id": "source:https://recipes.tistory.com/290",
+      "type": "source",
+      "label": "Pull up, Pull down 그리고 Open Collector",
+      "url": "https://recipes.tistory.com/290"
+    },
+    {
+      "id": "source:https://recipes.tistory.com/291",
+      "type": "source",
+      "label": "RLC와 Transistor 感",
+      "url": "https://recipes.tistory.com/291"
+    },
+    {
+      "id": "source:https://recipes.tistory.com/292",
+      "type": "source",
+      "label": "논리회로로의 확장",
+      "url": "https://recipes.tistory.com/292"
+    },
+    {
+      "id": "source:https://recipes.tistory.com/293",
+      "type": "source",
+      "label": "IC 기본",
+      "url": "https://recipes.tistory.com/293"
+    },
+    {
+      "id": "source:https://recipes.tistory.com/294",
+      "type": "source",
+      "label": "Register 넌 누구냐",
+      "url": "https://recipes.tistory.com/294"
+    },
+    {
+      "id": "source:https://recipes.tistory.com/295",
+      "type": "source",
+      "label": "Clock 이란?",
+      "url": "https://recipes.tistory.com/295"
+    },
+    {
+      "id": "source:https://recipes.tistory.com/296",
+      "type": "source",
+      "label": "Bus Transfer Mechanism",
+      "url": "https://recipes.tistory.com/296"
+    },
+    {
+      "id": "source:https://recipes.tistory.com/297",
+      "type": "source",
+      "label": "Timing 및 Spec 읽기",
+      "url": "https://recipes.tistory.com/297"
+    },
+    {
+      "id": "source:https://recipes.tistory.com/298",
+      "type": "source",
+      "label": "Memory의 선정과 XIP",
+      "url": "https://recipes.tistory.com/298"
+    },
+    {
+      "id": "source:https://recipes.tistory.com/299",
+      "type": "source",
+      "label": "RAM Memory의 물리적 동작",
+      "url": "https://recipes.tistory.com/299"
+    },
+    {
+      "id": "source:https://recipes.tistory.com/300",
+      "type": "source",
+      "label": "확장 to the CPU - How CPU Works",
+      "url": "https://recipes.tistory.com/300"
+    },
+    {
+      "id": "source:https://recipes.tistory.com/301",
+      "type": "source",
+      "label": "일반적인 CPU의 동작 예 (Core)와 Pipe Line",
+      "url": "https://recipes.tistory.com/301"
+    },
+    {
+      "id": "source:https://recipes.tistory.com/302",
+      "type": "source",
+      "label": "마이크로 프로세서 아뜰리에",
+      "url": "https://recipes.tistory.com/302"
+    },
+    {
+      "id": "source:https://recipes.tistory.com/304",
+      "type": "source",
+      "label": "ARM Inside",
+      "url": "https://recipes.tistory.com/304"
+    },
+    {
+      "id": "source:https://recipes.tistory.com/305",
+      "type": "source",
+      "label": "ARM mode와 THUMB mode",
+      "url": "https://recipes.tistory.com/305"
+    },
+    {
+      "id": "source:https://recipes.tistory.com/306",
+      "type": "source",
+      "label": "ARM 동작 Modes - 나는 어느 mode를 써야 하나",
+      "url": "https://recipes.tistory.com/306"
+    },
+    {
+      "id": "source:https://recipes.tistory.com/307",
+      "type": "source",
+      "label": "ARM Register와 Context",
+      "url": "https://recipes.tistory.com/307"
+    },
+    {
+      "id": "source:https://recipes.tistory.com/308",
+      "type": "source",
+      "label": "ARM Exceptions and Modes",
+      "url": "https://recipes.tistory.com/308"
+    },
+    {
+      "id": "source:https://recipes.tistory.com/309",
+      "type": "source",
+      "label": "ARM/ Thumb PCS - 레지스터 사용법",
+      "url": "https://recipes.tistory.com/309"
+    },
+    {
+      "id": "source:https://recipes.tistory.com/310",
+      "type": "source",
+      "label": "ARM은 Interrupt냄새를 어떻게 맡는가",
+      "url": "https://recipes.tistory.com/310"
+    },
+    {
+      "id": "source:https://recipes.tistory.com/311",
+      "type": "source",
+      "label": "ARM SoC (System On Chip) - ARM 그렇고 말고",
+      "url": "https://recipes.tistory.com/311"
+    },
+    {
+      "id": "source:https://recipes.tistory.com/312",
+      "type": "source",
+      "label": "AMBA - SoC안에서 IP끼리의 Bus 규격",
+      "url": "https://recipes.tistory.com/312"
+    },
+    {
+      "id": "source:https://recipes.tistory.com/313",
+      "type": "source",
+      "label": "Little Endian과 Big Endian",
+      "url": "https://recipes.tistory.com/313"
+    },
+    {
+      "id": "source:https://recipes.tistory.com/314",
+      "type": "source",
+      "label": "컴파일에 대한 단상",
+      "url": "https://recipes.tistory.com/314"
+    },
+    {
+      "id": "source:https://recipes.tistory.com/315",
+      "type": "source",
+      "label": "컴파일 공장 이야기.",
+      "url": "https://recipes.tistory.com/315"
+    },
+    {
+      "id": "source:https://recipes.tistory.com/316",
+      "type": "source",
+      "label": "컴파일 순서에 따라 원하는 컴파일을 해보자 -",
+      "url": "https://recipes.tistory.com/316"
+    },
+    {
+      "id": "source:https://recipes.tistory.com/317",
+      "type": "source",
+      "label": "Preprocss (-E option)와 #Include (\"\" <>)",
+      "url": "https://recipes.tistory.com/317"
+    },
+    {
+      "id": "source:https://recipes.tistory.com/318",
+      "type": "source",
+      "label": "Assembly로 만드는 방법",
+      "url": "https://recipes.tistory.com/318"
+    },
+    {
+      "id": "source:https://recipes.tistory.com/319",
+      "type": "source",
+      "label": "Library - 남한테 보여주기 싫어",
+      "url": "https://recipes.tistory.com/319"
+    },
+    {
+      "id": "source:https://recipes.tistory.com/320",
+      "type": "source",
+      "label": "Lib을 까보자~",
+      "url": "https://recipes.tistory.com/320"
+    },
+    {
+      "id": "source:https://recipes.tistory.com/321",
+      "type": "source",
+      "label": "컴파일러 Option들",
+      "url": "https://recipes.tistory.com/321"
+    },
+    {
+      "id": "source:https://recipes.tistory.com/322",
+      "type": "source",
+      "label": "변수의 scope와 그 생애 (Memory Map)",
+      "url": "https://recipes.tistory.com/322"
+    },
+    {
+      "id": "source:https://recipes.tistory.com/323",
+      "type": "source",
+      "label": "Memory Map과 Symbol 이야기",
+      "url": "https://recipes.tistory.com/323"
+    },
+    {
+      "id": "source:https://recipes.tistory.com/324",
+      "type": "source",
+      "label": "ELF format Object File에 관한 진실. -c option (기계어 세상)",
+      "url": "https://recipes.tistory.com/324"
+    },
+    {
+      "id": "source:https://recipes.tistory.com/325",
+      "type": "source",
+      "label": "Linker를 마무리 짓자 - ELF와 fromelf 까지!",
+      "url": "https://recipes.tistory.com/325"
+    },
+    {
+      "id": "source:https://recipes.tistory.com/326",
+      "type": "source",
+      "label": "Scatter Loading/ Linker Description Script와 메모리 다루기.",
+      "url": "https://recipes.tistory.com/326"
+    },
+    {
+      "id": "source:https://recipes.tistory.com/327",
+      "type": "source",
+      "label": "Map file 분석",
+      "url": "https://recipes.tistory.com/327"
+    },
+    {
+      "id": "source:https://recipes.tistory.com/328",
+      "type": "source",
+      "label": "Memory Map과 Linker의 만남 - Locator",
+      "url": "https://recipes.tistory.com/328"
+    },
+    {
+      "id": "source:https://recipes.tistory.com/329",
+      "type": "source",
+      "label": "Makefile은 뭘 하는 녀석일까~?",
+      "url": "https://recipes.tistory.com/329"
+    },
+    {
+      "id": "source:https://recipes.tistory.com/330",
+      "type": "source",
+      "label": "컴파일을 더더더 쉽게. MACRO와 SUFFIX",
+      "url": "https://recipes.tistory.com/330"
+    },
+    {
+      "id": "source:https://recipes.tistory.com/331",
+      "type": "source",
+      "label": "조금더~ Make 테크닉들",
+      "url": "https://recipes.tistory.com/331"
+    },
+    {
+      "id": "source:https://recipes.tistory.com/332",
+      "type": "source",
+      "label": "Make Option들",
+      "url": "https://recipes.tistory.com/332"
+    },
+    {
+      "id": "source:https://recipes.tistory.com/333",
+      "type": "source",
+      "label": "ARM Assembly를 파헤쳐 보자 ADS vs GNU",
+      "url": "https://recipes.tistory.com/333"
+    },
+    {
+      "id": "source:https://recipes.tistory.com/334",
+      "type": "source",
+      "label": "대충의 초간단 Assembly와 Reverse Engineering",
+      "url": "https://recipes.tistory.com/334"
+    },
+    {
+      "id": "source:https://recipes.tistory.com/335",
+      "type": "source",
+      "label": "ARM, Thumb mode와 S 접미사",
+      "url": "https://recipes.tistory.com/335"
+    },
+    {
+      "id": "source:https://recipes.tistory.com/336",
+      "type": "source",
+      "label": "ARM과 Thumb 사이의 Veneer",
+      "url": "https://recipes.tistory.com/336"
+    },
+    {
+      "id": "source:https://recipes.tistory.com/337",
+      "type": "source",
+      "label": "Inline Assembly와 INTLOCK의 구현",
+      "url": "https://recipes.tistory.com/337"
+    },
+    {
+      "id": "source:https://recipes.tistory.com/338",
+      "type": "source",
+      "label": "Pipe line과 Exception 관계 그리고 ^접미사",
+      "url": "https://recipes.tistory.com/338"
+    },
+    {
+      "id": "source:https://recipes.tistory.com/339",
+      "type": "source",
+      "label": "Exception Vector Table (EVT)과 각 Handler의 구현",
+      "url": "https://recipes.tistory.com/339"
+    },
+    {
+      "id": "source:https://recipes.tistory.com/340",
+      "type": "source",
+      "label": "SWI 의 진실",
+      "url": "https://recipes.tistory.com/340"
+    },
+    {
+      "id": "source:https://recipes.tistory.com/341",
+      "type": "source",
+      "label": "Coprocessor Assembly",
+      "url": "https://recipes.tistory.com/341"
+    },
+    {
+      "id": "source:https://recipes.tistory.com/342",
+      "type": "source",
+      "label": "Bootloader와 Memory Budget (Mapfile) 어떻게 변수초기화를 할 것인가",
+      "url": "https://recipes.tistory.com/342"
+    },
+    {
+      "id": "source:https://recipes.tistory.com/343",
+      "type": "source",
+      "label": "Reset Handler에서 main까지 (Entry Point)",
+      "url": "https://recipes.tistory.com/343"
+    },
+    {
+      "id": "source:https://recipes.tistory.com/344",
+      "type": "source",
+      "label": "Scatter Loading과 Bootup - __user_initial_stackheap",
+      "url": "https://recipes.tistory.com/344"
+    },
+    {
+      "id": "source:https://recipes.tistory.com/345",
+      "type": "source",
+      "label": "Context와 AAPCS",
+      "url": "https://recipes.tistory.com/345"
+    },
+    {
+      "id": "source:https://recipes.tistory.com/346",
+      "type": "source",
+      "label": "Pointer와 Array는 소녀시대와 원더걸스 , 그리고 이중포인터",
+      "url": "https://recipes.tistory.com/346"
+    },
+    {
+      "id": "source:https://recipes.tistory.com/347",
+      "type": "source",
+      "label": "struct와 typedef 그리고 PACKED",
+      "url": "https://recipes.tistory.com/347"
+    },
+    {
+      "id": "source:https://recipes.tistory.com/348",
+      "type": "source",
+      "label": "STACK, HEAP에 관한 소고.",
+      "url": "https://recipes.tistory.com/348"
+    },
+    {
+      "id": "source:https://recipes.tistory.com/349",
+      "type": "source",
+      "label": "Stack의 정체와 자세히 보기 - initialization까지",
+      "url": "https://recipes.tistory.com/349"
+    },
+    {
+      "id": "source:https://recipes.tistory.com/350",
+      "type": "source",
+      "label": "함수가 불렸을 때 일어나는 일. - Stack 뒤지기 신공",
+      "url": "https://recipes.tistory.com/350"
+    },
+    {
+      "id": "source:https://recipes.tistory.com/351",
+      "type": "source",
+      "label": "Stack 동작의 비밀과 실제 메모리 덤프",
+      "url": "https://recipes.tistory.com/351"
+    },
+    {
+      "id": "source:https://recipes.tistory.com/352",
+      "type": "source",
+      "label": "Stack Size는 어떻게 잡는가",
+      "url": "https://recipes.tistory.com/352"
+    },
+    {
+      "id": "source:https://recipes.tistory.com/353",
+      "type": "source",
+      "label": "함수 포인터와 실행주소 변경",
+      "url": "https://recipes.tistory.com/353"
+    },
+    {
+      "id": "source:https://recipes.tistory.com/354",
+      "type": "source",
+      "label": "Linked List와 Queue",
+      "url": "https://recipes.tistory.com/354"
+    },
+    {
+      "id": "source:https://recipes.tistory.com/355",
+      "type": "source",
+      "label": "RTOS와 Kernel",
+      "url": "https://recipes.tistory.com/355"
+    },
+    {
+      "id": "source:https://recipes.tistory.com/356",
+      "type": "source",
+      "label": "Embedded Software는 무한 Loop",
+      "url": "https://recipes.tistory.com/356"
+    },
+    {
+      "id": "source:https://recipes.tistory.com/357",
+      "type": "source",
+      "label": "Task 구조와 Signal",
+      "url": "https://recipes.tistory.com/357"
+    },
+    {
+      "id": "source:https://recipes.tistory.com/358",
+      "type": "source",
+      "label": "Task 상태, Task는 Service단위",
+      "url": "https://recipes.tistory.com/358"
+    },
+    {
+      "id": "source:https://recipes.tistory.com/359",
+      "type": "source",
+      "label": "Preemptive (선점형) Multitasking 이란 도대체",
+      "url": "https://recipes.tistory.com/359"
+    },
+    {
+      "id": "source:https://recipes.tistory.com/360",
+      "type": "source",
+      "label": "Context Swtiching과 TCB - Task의 상태변화",
+      "url": "https://recipes.tistory.com/360"
+    },
+    {
+      "id": "source:https://recipes.tistory.com/361",
+      "type": "source",
+      "label": "TCB - Task Control Block",
+      "url": "https://recipes.tistory.com/361"
+    },
+    {
+      "id": "source:https://recipes.tistory.com/362",
+      "type": "source",
+      "label": "Scheduler의 구현",
+      "url": "https://recipes.tistory.com/362"
+    },
+    {
+      "id": "source:https://recipes.tistory.com/363",
+      "type": "source",
+      "label": "ISR은 어떻게 구현해 - 선점형과 비선점형",
+      "url": "https://recipes.tistory.com/363"
+    },
+    {
+      "id": "source:https://recipes.tistory.com/364",
+      "type": "source",
+      "label": "선점형 Kernel에서 wait, send, clr signal의 구현과 IRQ Handler",
+      "url": "https://recipes.tistory.com/364"
+    },
+    {
+      "id": "source:https://recipes.tistory.com/365",
+      "type": "source",
+      "label": "Clock tick ISR - Timer Service",
+      "url": "https://recipes.tistory.com/365"
+    },
+    {
+      "id": "source:https://recipes.tistory.com/366",
+      "type": "source",
+      "label": "ATOMIC - Critical Section Mutex Semaphore",
+      "url": "https://recipes.tistory.com/366"
+    },
+    {
+      "id": "source:https://recipes.tistory.com/367",
+      "type": "source",
+      "label": "Interrupt VS. Polling",
+      "url": "https://recipes.tistory.com/367"
+    },
+    {
+      "id": "source:https://recipes.tistory.com/368",
+      "type": "source",
+      "label": "Queue와 Inter Task Communication",
+      "url": "https://recipes.tistory.com/368"
+    },
+    {
+      "id": "source:https://recipes.tistory.com/369",
+      "type": "source",
+      "label": "DPC나, APC, 그리고 Bottom Half",
+      "url": "https://recipes.tistory.com/369"
+    },
+    {
+      "id": "source:https://recipes.tistory.com/370",
+      "type": "source",
+      "label": "Watch dog task",
+      "url": "https://recipes.tistory.com/370"
+    },
+    {
+      "id": "source:https://recipes.tistory.com/371",
+      "type": "source",
+      "label": "Bootup 중 Kernel로의 진입 - main() 함수 -",
+      "url": "https://recipes.tistory.com/371"
+    },
+    {
+      "id": "source:https://recipes.tistory.com/372",
+      "type": "source",
+      "label": "Kernel을 Porting 한다는 것",
+      "url": "https://recipes.tistory.com/372"
+    },
+    {
+      "id": "source:https://recipes.tistory.com/373",
+      "type": "source",
+      "label": "Device를 control 한다는 것",
+      "url": "https://recipes.tistory.com/373"
+    },
+    {
+      "id": "source:https://recipes.tistory.com/374",
+      "type": "source",
+      "label": "Register를 Setting 한다는 것과 Memory Mapped IO",
+      "url": "https://recipes.tistory.com/374"
+    },
+    {
+      "id": "source:https://recipes.tistory.com/375",
+      "type": "source",
+      "label": "Memory Device를 Control 한다는 것",
+      "url": "https://recipes.tistory.com/375"
+    },
+    {
+      "id": "source:https://recipes.tistory.com/376",
+      "type": "source",
+      "label": "Bus Sizer Register와 Memory Controller - 메모리 확장구성과 CS와의 관계",
+      "url": "https://recipes.tistory.com/376"
+    },
+    {
+      "id": "source:https://recipes.tistory.com/377",
+      "type": "source",
+      "label": "특이한 Device Interface의 CS와 Address의 이용 - LCD",
+      "url": "https://recipes.tistory.com/377"
+    },
+    {
+      "id": "source:https://recipes.tistory.com/378",
+      "type": "source",
+      "label": "Shadow의 개념과 Bit operation",
+      "url": "https://recipes.tistory.com/378"
+    },
+    {
+      "id": "source:https://recipes.tistory.com/379",
+      "type": "source",
+      "label": "C의 조미료 MACRO Technics",
+      "url": "https://recipes.tistory.com/379"
+    },
+    {
+      "id": "source:https://recipes.tistory.com/380",
+      "type": "source",
+      "label": "Synchronous와 Asynchronous는 머냐",
+      "url": "https://recipes.tistory.com/380"
+    },
+    {
+      "id": "source:https://recipes.tistory.com/381",
+      "type": "source",
+      "label": "Wait State 이야기",
+      "url": "https://recipes.tistory.com/381"
+    },
+    {
+      "id": "source:https://recipes.tistory.com/382",
+      "type": "source",
+      "label": "PLL과 M/N:D",
+      "url": "https://recipes.tistory.com/382"
+    },
+    {
+      "id": "source:https://recipes.tistory.com/383",
+      "type": "source",
+      "label": "GPIO (Tristate Buffer)의 정체와 GPIO ISR",
+      "url": "https://recipes.tistory.com/383"
+    },
+    {
+      "id": "source:https://recipes.tistory.com/384",
+      "type": "source",
+      "label": "DMA (Direct Memory Access) - CPU몰래 영차영차",
+      "url": "https://recipes.tistory.com/384"
+    },
+    {
+      "id": "source:https://recipes.tistory.com/385",
+      "type": "source",
+      "label": "Cache, Cash?",
+      "url": "https://recipes.tistory.com/385"
+    },
+    {
+      "id": "source:https://recipes.tistory.com/386",
+      "type": "source",
+      "label": "MMU (Memory Management Unit)",
+      "url": "https://recipes.tistory.com/386"
+    },
+    {
+      "id": "source:https://recipes.tistory.com/57",
+      "type": "source",
+      "label": "RC 회로 감잡자.",
+      "url": "https://recipes.tistory.com/57"
+    },
+    {
+      "id": "source:https://recipes.tistory.com/58",
+      "type": "source",
+      "label": "RC 회로 - 스위칭 특성과 시상수",
+      "url": "https://recipes.tistory.com/58"
+    },
+    {
+      "id": "source:https://recipes.tistory.com/60",
+      "type": "source",
+      "label": "강의실 전체 Map2 - Season 2 옴니버스",
+      "url": "https://recipes.tistory.com/60"
+    },
+    {
+      "id": "source:https://recipes.tistory.com/61",
+      "type": "source",
+      "label": "RC 회로 - 미분회로, 적분회로",
+      "url": "https://recipes.tistory.com/61"
+    },
+    {
+      "id": "source:https://recipes.tistory.com/62",
+      "type": "source",
+      "label": "다이오우드 연결방식과 역할",
+      "url": "https://recipes.tistory.com/62"
+    },
+    {
+      "id": "source:https://recipes.tistory.com/63",
+      "type": "source",
+      "label": "다이오우드 특성과 제너다이오우드",
+      "url": "https://recipes.tistory.com/63"
+    },
+    {
+      "id": "source:https://recipes.tistory.com/65",
+      "type": "source",
+      "label": "트랜지스터는 가변저항이다.",
+      "url": "https://recipes.tistory.com/65"
+    },
+    {
+      "id": "source:https://recipes.tistory.com/66",
+      "type": "source",
+      "label": "트랜지스터 - 증폭기와 스위치로의 작동개념",
+      "url": "https://recipes.tistory.com/66"
+    },
+    {
+      "id": "source:https://recipes.tistory.com/70",
+      "type": "source",
+      "label": "콘덴서(capacitor)",
+      "url": "https://recipes.tistory.com/70"
+    },
+    {
+      "id": "source:https://recipes.tistory.com/71",
+      "type": "source",
+      "label": "저항(resistor) - 네가지 역할",
+      "url": "https://recipes.tistory.com/71"
+    },
+    {
+      "id": "source:https://source.android.com/docs/core/architecture",
+      "type": "source",
+      "label": "AOSP — Architecture overview",
+      "url": "https://source.android.com/docs/core/architecture"
+    },
+    {
+      "id": "source:https://source.android.com/docs/core/runtime/zygote",
+      "type": "source",
+      "label": "AOSP — About the Zygote processes",
+      "url": "https://source.android.com/docs/core/runtime/zygote"
+    },
+    {
+      "id": "source:https://www.murata.com/en-global/products/inductor/overview/learn/glossary",
+      "type": "source",
+      "label": "Murata — Inductor glossary and self-resonance",
+      "url": "https://www.murata.com/en-global/products/inductor/overview/learn/glossary"
+    },
+    {
+      "id": "source:https://www.ti.com/document-viewer/lit/html/SSZTCG6/GUID-1FB9BB52-BA94-4241-8302-457AD289FB19",
+      "type": "source",
+      "label": "Texas Instruments — Charge-pump DC/DC converters",
+      "url": "https://www.ti.com/document-viewer/lit/html/SSZTCG6/GUID-1FB9BB52-BA94-4241-8302-457AD289FB19"
+    },
+    {
+      "id": "source:https://www.ti.com/lit/wp/slpy005/slpy005.pdf",
+      "type": "source",
+      "label": "Texas Instruments — The Forgotten Converter",
+      "url": "https://www.ti.com/lit/wp/slpy005/slpy005.pdf"
+    },
+    {
+      "id": "source:https://www.usb.org/defined-class-codes",
+      "type": "source",
+      "label": "USB-IF — Defined Class Codes",
+      "url": "https://www.usb.org/defined-class-codes"
+    }
+  ],
+  "edges": [
+    {
+      "id": "citation:adc:https://recipes.tistory.com/286",
+      "source": "adc",
+      "target": "source:https://recipes.tistory.com/286",
+      "type": "citation"
+    },
+    {
+      "id": "citation:adc:https://recipes.tistory.com/60",
+      "source": "adc",
+      "target": "source:https://recipes.tistory.com/60",
+      "type": "citation"
+    },
+    {
+      "id": "citation:android-stack:https://recipes.tistory.com/60",
+      "source": "android-stack",
+      "target": "source:https://recipes.tistory.com/60",
+      "type": "citation"
+    },
+    {
+      "id": "citation:android-stack:https://source.android.com/docs/core/architecture",
+      "source": "android-stack",
+      "target": "source:https://source.android.com/docs/core/architecture",
+      "type": "citation"
+    },
+    {
+      "id": "citation:android-stack:https://source.android.com/docs/core/runtime/zygote",
+      "source": "android-stack",
+      "target": "source:https://source.android.com/docs/core/runtime/zygote",
+      "type": "citation"
+    },
+    {
+      "id": "citation:arm-context:https://recipes.tistory.com/235",
+      "source": "arm-context",
+      "target": "source:https://recipes.tistory.com/235",
+      "type": "citation"
+    },
+    {
+      "id": "citation:arm-context:https://recipes.tistory.com/307",
+      "source": "arm-context",
+      "target": "source:https://recipes.tistory.com/307",
+      "type": "citation"
+    },
+    {
+      "id": "citation:arm-context:https://recipes.tistory.com/309",
+      "source": "arm-context",
+      "target": "source:https://recipes.tistory.com/309",
+      "type": "citation"
+    },
+    {
+      "id": "citation:arm-context:https://recipes.tistory.com/345",
+      "source": "arm-context",
+      "target": "source:https://recipes.tistory.com/345",
+      "type": "citation"
+    },
+    {
+      "id": "citation:arm-modes:https://recipes.tistory.com/234",
+      "source": "arm-modes",
+      "target": "source:https://recipes.tistory.com/234",
+      "type": "citation"
+    },
+    {
+      "id": "citation:arm-modes:https://recipes.tistory.com/237",
+      "source": "arm-modes",
+      "target": "source:https://recipes.tistory.com/237",
+      "type": "citation"
+    },
+    {
+      "id": "citation:arm-modes:https://recipes.tistory.com/305",
+      "source": "arm-modes",
+      "target": "source:https://recipes.tistory.com/305",
+      "type": "citation"
+    },
+    {
+      "id": "citation:arm-modes:https://recipes.tistory.com/306",
+      "source": "arm-modes",
+      "target": "source:https://recipes.tistory.com/306",
+      "type": "citation"
+    },
+    {
+      "id": "citation:arm-modes:https://recipes.tistory.com/308",
+      "source": "arm-modes",
+      "target": "source:https://recipes.tistory.com/308",
+      "type": "citation"
+    },
+    {
+      "id": "citation:arm-modes:https://recipes.tistory.com/335",
+      "source": "arm-modes",
+      "target": "source:https://recipes.tistory.com/335",
+      "type": "citation"
+    },
+    {
+      "id": "citation:arm-modes:https://recipes.tistory.com/336",
+      "source": "arm-modes",
+      "target": "source:https://recipes.tistory.com/336",
+      "type": "citation"
+    },
+    {
+      "id": "citation:asm-abi:https://recipes.tistory.com/217",
+      "source": "asm-abi",
+      "target": "source:https://recipes.tistory.com/217",
+      "type": "citation"
+    },
+    {
+      "id": "citation:asm-abi:https://recipes.tistory.com/218",
+      "source": "asm-abi",
+      "target": "source:https://recipes.tistory.com/218",
+      "type": "citation"
+    },
+    {
+      "id": "citation:asm-abi:https://recipes.tistory.com/264",
+      "source": "asm-abi",
+      "target": "source:https://recipes.tistory.com/264",
+      "type": "citation"
+    },
+    {
+      "id": "citation:asm-abi:https://recipes.tistory.com/333",
+      "source": "asm-abi",
+      "target": "source:https://recipes.tistory.com/333",
+      "type": "citation"
+    },
+    {
+      "id": "citation:asm-abi:https://recipes.tistory.com/334",
+      "source": "asm-abi",
+      "target": "source:https://recipes.tistory.com/334",
+      "type": "citation"
+    },
+    {
+      "id": "citation:asm-abi:https://recipes.tistory.com/337",
+      "source": "asm-abi",
+      "target": "source:https://recipes.tistory.com/337",
+      "type": "citation"
+    },
+    {
+      "id": "citation:asm-abi:https://recipes.tistory.com/345",
+      "source": "asm-abi",
+      "target": "source:https://recipes.tistory.com/345",
+      "type": "citation"
+    },
+    {
+      "id": "citation:buses-i2c-spi:https://recipes.tistory.com/290",
+      "source": "buses-i2c-spi",
+      "target": "source:https://recipes.tistory.com/290",
+      "type": "citation"
+    },
+    {
+      "id": "citation:buses-i2c-spi:https://recipes.tistory.com/373",
+      "source": "buses-i2c-spi",
+      "target": "source:https://recipes.tistory.com/373",
+      "type": "citation"
+    },
+    {
+      "id": "citation:buses-i2c-spi:https://recipes.tistory.com/380",
+      "source": "buses-i2c-spi",
+      "target": "source:https://recipes.tistory.com/380",
+      "type": "citation"
+    },
+    {
+      "id": "citation:c-memory:https://recipes.tistory.com/193",
+      "source": "c-memory",
+      "target": "source:https://recipes.tistory.com/193",
+      "type": "citation"
+    },
+    {
+      "id": "citation:c-memory:https://recipes.tistory.com/216",
+      "source": "c-memory",
+      "target": "source:https://recipes.tistory.com/216",
+      "type": "citation"
+    },
+    {
+      "id": "citation:c-memory:https://recipes.tistory.com/322",
+      "source": "c-memory",
+      "target": "source:https://recipes.tistory.com/322",
+      "type": "citation"
+    },
+    {
+      "id": "citation:c-memory:https://recipes.tistory.com/348",
+      "source": "c-memory",
+      "target": "source:https://recipes.tistory.com/348",
+      "type": "citation"
+    },
+    {
+      "id": "citation:c-memory:https://recipes.tistory.com/349",
+      "source": "c-memory",
+      "target": "source:https://recipes.tistory.com/349",
+      "type": "citation"
+    },
+    {
+      "id": "citation:c-memory:https://recipes.tistory.com/350",
+      "source": "c-memory",
+      "target": "source:https://recipes.tistory.com/350",
+      "type": "citation"
+    },
+    {
+      "id": "citation:c-memory:https://recipes.tistory.com/351",
+      "source": "c-memory",
+      "target": "source:https://recipes.tistory.com/351",
+      "type": "citation"
+    },
+    {
+      "id": "citation:c-memory:https://recipes.tistory.com/352",
+      "source": "c-memory",
+      "target": "source:https://recipes.tistory.com/352",
+      "type": "citation"
+    },
+    {
+      "id": "citation:capacitor:https://recipes.tistory.com/287",
+      "source": "capacitor",
+      "target": "source:https://recipes.tistory.com/287",
+      "type": "citation"
+    },
+    {
+      "id": "citation:capacitor:https://recipes.tistory.com/57",
+      "source": "capacitor",
+      "target": "source:https://recipes.tistory.com/57",
+      "type": "citation"
+    },
+    {
+      "id": "citation:capacitor:https://recipes.tistory.com/70",
+      "source": "capacitor",
+      "target": "source:https://recipes.tistory.com/70",
+      "type": "citation"
+    },
+    {
+      "id": "citation:charge-pump:https://recipes.tistory.com/60",
+      "source": "charge-pump",
+      "target": "source:https://recipes.tistory.com/60",
+      "type": "citation"
+    },
+    {
+      "id": "citation:charge-pump:https://recipes.tistory.com/70",
+      "source": "charge-pump",
+      "target": "source:https://recipes.tistory.com/70",
+      "type": "citation"
+    },
+    {
+      "id": "citation:charge-pump:https://www.ti.com/document-viewer/lit/html/SSZTCG6/GUID-1FB9BB52-BA94-4241-8302-457AD289FB19",
+      "source": "charge-pump",
+      "target": "source:https://www.ti.com/document-viewer/lit/html/SSZTCG6/GUID-1FB9BB52-BA94-4241-8302-457AD289FB19",
+      "type": "citation"
+    },
+    {
+      "id": "citation:clocks-pll:https://recipes.tistory.com/285",
+      "source": "clocks-pll",
+      "target": "source:https://recipes.tistory.com/285",
+      "type": "citation"
+    },
+    {
+      "id": "citation:clocks-pll:https://recipes.tistory.com/295",
+      "source": "clocks-pll",
+      "target": "source:https://recipes.tistory.com/295",
+      "type": "citation"
+    },
+    {
+      "id": "citation:clocks-pll:https://recipes.tistory.com/382",
+      "source": "clocks-pll",
+      "target": "source:https://recipes.tistory.com/382",
+      "type": "citation"
+    },
+    {
+      "id": "citation:compile-pipeline:https://recipes.tistory.com/212",
+      "source": "compile-pipeline",
+      "target": "source:https://recipes.tistory.com/212",
+      "type": "citation"
+    },
+    {
+      "id": "citation:compile-pipeline:https://recipes.tistory.com/314",
+      "source": "compile-pipeline",
+      "target": "source:https://recipes.tistory.com/314",
+      "type": "citation"
+    },
+    {
+      "id": "citation:compile-pipeline:https://recipes.tistory.com/315",
+      "source": "compile-pipeline",
+      "target": "source:https://recipes.tistory.com/315",
+      "type": "citation"
+    },
+    {
+      "id": "citation:compile-pipeline:https://recipes.tistory.com/316",
+      "source": "compile-pipeline",
+      "target": "source:https://recipes.tistory.com/316",
+      "type": "citation"
+    },
+    {
+      "id": "citation:compile-pipeline:https://recipes.tistory.com/317",
+      "source": "compile-pipeline",
+      "target": "source:https://recipes.tistory.com/317",
+      "type": "citation"
+    },
+    {
+      "id": "citation:compile-pipeline:https://recipes.tistory.com/318",
+      "source": "compile-pipeline",
+      "target": "source:https://recipes.tistory.com/318",
+      "type": "citation"
+    },
+    {
+      "id": "citation:compile-pipeline:https://recipes.tistory.com/321",
+      "source": "compile-pipeline",
+      "target": "source:https://recipes.tistory.com/321",
+      "type": "citation"
+    },
+    {
+      "id": "citation:compile-pipeline:https://recipes.tistory.com/379",
+      "source": "compile-pipeline",
+      "target": "source:https://recipes.tistory.com/379",
+      "type": "citation"
+    },
+    {
+      "id": "citation:core-soc:https://recipes.tistory.com/192",
+      "source": "core-soc",
+      "target": "source:https://recipes.tistory.com/192",
+      "type": "citation"
+    },
+    {
+      "id": "citation:core-soc:https://recipes.tistory.com/194",
+      "source": "core-soc",
+      "target": "source:https://recipes.tistory.com/194",
+      "type": "citation"
+    },
+    {
+      "id": "citation:core-soc:https://recipes.tistory.com/195",
+      "source": "core-soc",
+      "target": "source:https://recipes.tistory.com/195",
+      "type": "citation"
+    },
+    {
+      "id": "citation:core-soc:https://recipes.tistory.com/200",
+      "source": "core-soc",
+      "target": "source:https://recipes.tistory.com/200",
+      "type": "citation"
+    },
+    {
+      "id": "citation:core-soc:https://recipes.tistory.com/202",
+      "source": "core-soc",
+      "target": "source:https://recipes.tistory.com/202",
+      "type": "citation"
+    },
+    {
+      "id": "citation:core-soc:https://recipes.tistory.com/233",
+      "source": "core-soc",
+      "target": "source:https://recipes.tistory.com/233",
+      "type": "citation"
+    },
+    {
+      "id": "citation:core-soc:https://recipes.tistory.com/284",
+      "source": "core-soc",
+      "target": "source:https://recipes.tistory.com/284",
+      "type": "citation"
+    },
+    {
+      "id": "citation:core-soc:https://recipes.tistory.com/302",
+      "source": "core-soc",
+      "target": "source:https://recipes.tistory.com/302",
+      "type": "citation"
+    },
+    {
+      "id": "citation:core-soc:https://recipes.tistory.com/304",
+      "source": "core-soc",
+      "target": "source:https://recipes.tistory.com/304",
+      "type": "citation"
+    },
+    {
+      "id": "citation:core-soc:https://recipes.tistory.com/311",
+      "source": "core-soc",
+      "target": "source:https://recipes.tistory.com/311",
+      "type": "citation"
+    },
+    {
+      "id": "citation:core-soc:https://recipes.tistory.com/312",
+      "source": "core-soc",
+      "target": "source:https://recipes.tistory.com/312",
+      "type": "citation"
+    },
+    {
+      "id": "citation:cpu-pipeline:https://recipes.tistory.com/236",
+      "source": "cpu-pipeline",
+      "target": "source:https://recipes.tistory.com/236",
+      "type": "citation"
+    },
+    {
+      "id": "citation:cpu-pipeline:https://recipes.tistory.com/300",
+      "source": "cpu-pipeline",
+      "target": "source:https://recipes.tistory.com/300",
+      "type": "citation"
+    },
+    {
+      "id": "citation:cpu-pipeline:https://recipes.tistory.com/301",
+      "source": "cpu-pipeline",
+      "target": "source:https://recipes.tistory.com/301",
+      "type": "citation"
+    },
+    {
+      "id": "citation:current-loop:https://recipes.tistory.com/284",
+      "source": "current-loop",
+      "target": "source:https://recipes.tistory.com/284",
+      "type": "citation"
+    },
+    {
+      "id": "citation:current-loop:https://recipes.tistory.com/287",
+      "source": "current-loop",
+      "target": "source:https://recipes.tistory.com/287",
+      "type": "citation"
+    },
+    {
+      "id": "citation:current-loop:https://recipes.tistory.com/57",
+      "source": "current-loop",
+      "target": "source:https://recipes.tistory.com/57",
+      "type": "citation"
+    },
+    {
+      "id": "citation:debug-jtag:https://recipes.tistory.com/209",
+      "source": "debug-jtag",
+      "target": "source:https://recipes.tistory.com/209",
+      "type": "citation"
+    },
+    {
+      "id": "citation:debug-jtag:https://recipes.tistory.com/219",
+      "source": "debug-jtag",
+      "target": "source:https://recipes.tistory.com/219",
+      "type": "citation"
+    },
+    {
+      "id": "citation:debug-jtag:https://recipes.tistory.com/60",
+      "source": "debug-jtag",
+      "target": "source:https://recipes.tistory.com/60",
+      "type": "citation"
+    },
+    {
+      "id": "citation:debugging:https://recipes.tistory.com/219",
+      "source": "debugging",
+      "target": "source:https://recipes.tistory.com/219",
+      "type": "citation"
+    },
+    {
+      "id": "citation:debugging:https://recipes.tistory.com/351",
+      "source": "debugging",
+      "target": "source:https://recipes.tistory.com/351",
+      "type": "citation"
+    },
+    {
+      "id": "citation:debugging:https://recipes.tistory.com/352",
+      "source": "debugging",
+      "target": "source:https://recipes.tistory.com/352",
+      "type": "citation"
+    },
+    {
+      "id": "citation:debugging:https://recipes.tistory.com/60",
+      "source": "debugging",
+      "target": "source:https://recipes.tistory.com/60",
+      "type": "citation"
+    },
+    {
+      "id": "citation:decoupling:https://recipes.tistory.com/288",
+      "source": "decoupling",
+      "target": "source:https://recipes.tistory.com/288",
+      "type": "citation"
+    },
+    {
+      "id": "citation:decoupling:https://recipes.tistory.com/291",
+      "source": "decoupling",
+      "target": "source:https://recipes.tistory.com/291",
+      "type": "citation"
+    },
+    {
+      "id": "citation:decoupling:https://recipes.tistory.com/70",
+      "source": "decoupling",
+      "target": "source:https://recipes.tistory.com/70",
+      "type": "citation"
+    },
+    {
+      "id": "citation:dev-environment:https://recipes.tistory.com/212",
+      "source": "dev-environment",
+      "target": "source:https://recipes.tistory.com/212",
+      "type": "citation"
+    },
+    {
+      "id": "citation:dev-environment:https://recipes.tistory.com/214",
+      "source": "dev-environment",
+      "target": "source:https://recipes.tistory.com/214",
+      "type": "citation"
+    },
+    {
+      "id": "citation:dev-environment:https://recipes.tistory.com/238",
+      "source": "dev-environment",
+      "target": "source:https://recipes.tistory.com/238",
+      "type": "citation"
+    },
+    {
+      "id": "citation:dev-environment:https://recipes.tistory.com/60",
+      "source": "dev-environment",
+      "target": "source:https://recipes.tistory.com/60",
+      "type": "citation"
+    },
+    {
+      "id": "citation:device-drivers:https://cdn.kernel.org/doc/html/latest/driver-api/driver-model/overview.html",
+      "source": "device-drivers",
+      "target": "source:https://cdn.kernel.org/doc/html/latest/driver-api/driver-model/overview.html",
+      "type": "citation"
+    },
+    {
+      "id": "citation:device-drivers:https://recipes.tistory.com/372",
+      "source": "device-drivers",
+      "target": "source:https://recipes.tistory.com/372",
+      "type": "citation"
+    },
+    {
+      "id": "citation:device-drivers:https://recipes.tistory.com/373",
+      "source": "device-drivers",
+      "target": "source:https://recipes.tistory.com/373",
+      "type": "citation"
+    },
+    {
+      "id": "citation:device-drivers:https://recipes.tistory.com/374",
+      "source": "device-drivers",
+      "target": "source:https://recipes.tistory.com/374",
+      "type": "citation"
+    },
+    {
+      "id": "citation:device-drivers:https://recipes.tistory.com/60",
+      "source": "device-drivers",
+      "target": "source:https://recipes.tistory.com/60",
+      "type": "citation"
+    },
+    {
+      "id": "citation:diode-led:https://recipes.tistory.com/199",
+      "source": "diode-led",
+      "target": "source:https://recipes.tistory.com/199",
+      "type": "citation"
+    },
+    {
+      "id": "citation:diode-led:https://recipes.tistory.com/62",
+      "source": "diode-led",
+      "target": "source:https://recipes.tistory.com/62",
+      "type": "citation"
+    },
+    {
+      "id": "citation:diode-led:https://recipes.tistory.com/63",
+      "source": "diode-led",
+      "target": "source:https://recipes.tistory.com/63",
+      "type": "citation"
+    },
+    {
+      "id": "citation:dma-cache-mmu:https://recipes.tistory.com/203",
+      "source": "dma-cache-mmu",
+      "target": "source:https://recipes.tistory.com/203",
+      "type": "citation"
+    },
+    {
+      "id": "citation:dma-cache-mmu:https://recipes.tistory.com/204",
+      "source": "dma-cache-mmu",
+      "target": "source:https://recipes.tistory.com/204",
+      "type": "citation"
+    },
+    {
+      "id": "citation:dma-cache-mmu:https://recipes.tistory.com/220",
+      "source": "dma-cache-mmu",
+      "target": "source:https://recipes.tistory.com/220",
+      "type": "citation"
+    },
+    {
+      "id": "citation:dma-cache-mmu:https://recipes.tistory.com/221",
+      "source": "dma-cache-mmu",
+      "target": "source:https://recipes.tistory.com/221",
+      "type": "citation"
+    },
+    {
+      "id": "citation:dma-cache-mmu:https://recipes.tistory.com/341",
+      "source": "dma-cache-mmu",
+      "target": "source:https://recipes.tistory.com/341",
+      "type": "citation"
+    },
+    {
+      "id": "citation:dma-cache-mmu:https://recipes.tistory.com/384",
+      "source": "dma-cache-mmu",
+      "target": "source:https://recipes.tistory.com/384",
+      "type": "citation"
+    },
+    {
+      "id": "citation:dma-cache-mmu:https://recipes.tistory.com/385",
+      "source": "dma-cache-mmu",
+      "target": "source:https://recipes.tistory.com/385",
+      "type": "citation"
+    },
+    {
+      "id": "citation:dma-cache-mmu:https://recipes.tistory.com/386",
+      "source": "dma-cache-mmu",
+      "target": "source:https://recipes.tistory.com/386",
+      "type": "citation"
+    },
+    {
+      "id": "citation:dynamic-allocation:https://recipes.tistory.com/348",
+      "source": "dynamic-allocation",
+      "target": "source:https://recipes.tistory.com/348",
+      "type": "citation"
+    },
+    {
+      "id": "citation:dynamic-allocation:https://recipes.tistory.com/60",
+      "source": "dynamic-allocation",
+      "target": "source:https://recipes.tistory.com/60",
+      "type": "citation"
+    },
+    {
+      "id": "citation:electrical-power:https://recipes.tistory.com/233",
+      "source": "electrical-power",
+      "target": "source:https://recipes.tistory.com/233",
+      "type": "citation"
+    },
+    {
+      "id": "citation:electrical-power:https://recipes.tistory.com/63",
+      "source": "electrical-power",
+      "target": "source:https://recipes.tistory.com/63",
+      "type": "citation"
+    },
+    {
+      "id": "citation:electrical-power:https://recipes.tistory.com/71",
+      "source": "electrical-power",
+      "target": "source:https://recipes.tistory.com/71",
+      "type": "citation"
+    },
+    {
+      "id": "citation:endian:https://recipes.tistory.com/313",
+      "source": "endian",
+      "target": "source:https://recipes.tistory.com/313",
+      "type": "citation"
+    },
+    {
+      "id": "citation:exceptions:https://recipes.tistory.com/208",
+      "source": "exceptions",
+      "target": "source:https://recipes.tistory.com/208",
+      "type": "citation"
+    },
+    {
+      "id": "citation:exceptions:https://recipes.tistory.com/308",
+      "source": "exceptions",
+      "target": "source:https://recipes.tistory.com/308",
+      "type": "citation"
+    },
+    {
+      "id": "citation:exceptions:https://recipes.tistory.com/310",
+      "source": "exceptions",
+      "target": "source:https://recipes.tistory.com/310",
+      "type": "citation"
+    },
+    {
+      "id": "citation:exceptions:https://recipes.tistory.com/338",
+      "source": "exceptions",
+      "target": "source:https://recipes.tistory.com/338",
+      "type": "citation"
+    },
+    {
+      "id": "citation:exceptions:https://recipes.tistory.com/339",
+      "source": "exceptions",
+      "target": "source:https://recipes.tistory.com/339",
+      "type": "citation"
+    },
+    {
+      "id": "citation:exceptions:https://recipes.tistory.com/340",
+      "source": "exceptions",
+      "target": "source:https://recipes.tistory.com/340",
+      "type": "citation"
+    },
+    {
+      "id": "citation:flash-ram:https://recipes.tistory.com/205",
+      "source": "flash-ram",
+      "target": "source:https://recipes.tistory.com/205",
+      "type": "citation"
+    },
+    {
+      "id": "citation:flash-ram:https://recipes.tistory.com/206",
+      "source": "flash-ram",
+      "target": "source:https://recipes.tistory.com/206",
+      "type": "citation"
+    },
+    {
+      "id": "citation:flash-ram:https://recipes.tistory.com/207",
+      "source": "flash-ram",
+      "target": "source:https://recipes.tistory.com/207",
+      "type": "citation"
+    },
+    {
+      "id": "citation:flash-ram:https://recipes.tistory.com/298",
+      "source": "flash-ram",
+      "target": "source:https://recipes.tistory.com/298",
+      "type": "citation"
+    },
+    {
+      "id": "citation:flash-ram:https://recipes.tistory.com/299",
+      "source": "flash-ram",
+      "target": "source:https://recipes.tistory.com/299",
+      "type": "citation"
+    },
+    {
+      "id": "citation:floating-input:https://recipes.tistory.com/290",
+      "source": "floating-input",
+      "target": "source:https://recipes.tistory.com/290",
+      "type": "citation"
+    },
+    {
+      "id": "citation:floating-input:https://recipes.tistory.com/383",
+      "source": "floating-input",
+      "target": "source:https://recipes.tistory.com/383",
+      "type": "citation"
+    },
+    {
+      "id": "citation:gpio:https://recipes.tistory.com/199",
+      "source": "gpio",
+      "target": "source:https://recipes.tistory.com/199",
+      "type": "citation"
+    },
+    {
+      "id": "citation:gpio:https://recipes.tistory.com/293",
+      "source": "gpio",
+      "target": "source:https://recipes.tistory.com/293",
+      "type": "citation"
+    },
+    {
+      "id": "citation:gpio:https://recipes.tistory.com/383",
+      "source": "gpio",
+      "target": "source:https://recipes.tistory.com/383",
+      "type": "citation"
+    },
+    {
+      "id": "citation:ground-reference:https://recipes.tistory.com/286",
+      "source": "ground-reference",
+      "target": "source:https://recipes.tistory.com/286",
+      "type": "citation"
+    },
+    {
+      "id": "citation:ground-reference:https://recipes.tistory.com/57",
+      "source": "ground-reference",
+      "target": "source:https://recipes.tistory.com/57",
+      "type": "citation"
+    },
+    {
+      "id": "citation:impedance:https://recipes.tistory.com/288",
+      "source": "impedance",
+      "target": "source:https://recipes.tistory.com/288",
+      "type": "citation"
+    },
+    {
+      "id": "citation:impedance:https://recipes.tistory.com/60",
+      "source": "impedance",
+      "target": "source:https://recipes.tistory.com/60",
+      "type": "citation"
+    },
+    {
+      "id": "citation:impedance:https://recipes.tistory.com/71",
+      "source": "impedance",
+      "target": "source:https://recipes.tistory.com/71",
+      "type": "citation"
+    },
+    {
+      "id": "citation:inductor:https://recipes.tistory.com/287",
+      "source": "inductor",
+      "target": "source:https://recipes.tistory.com/287",
+      "type": "citation"
+    },
+    {
+      "id": "citation:inductor:https://recipes.tistory.com/291",
+      "source": "inductor",
+      "target": "source:https://recipes.tistory.com/291",
+      "type": "citation"
+    },
+    {
+      "id": "citation:inductor:https://www.murata.com/en-global/products/inductor/overview/learn/glossary",
+      "source": "inductor",
+      "target": "source:https://www.murata.com/en-global/products/inductor/overview/learn/glossary",
+      "type": "citation"
+    },
+    {
+      "id": "citation:interrupts:https://recipes.tistory.com/208",
+      "source": "interrupts",
+      "target": "source:https://recipes.tistory.com/208",
+      "type": "citation"
+    },
+    {
+      "id": "citation:interrupts:https://recipes.tistory.com/310",
+      "source": "interrupts",
+      "target": "source:https://recipes.tistory.com/310",
+      "type": "citation"
+    },
+    {
+      "id": "citation:interrupts:https://recipes.tistory.com/363",
+      "source": "interrupts",
+      "target": "source:https://recipes.tistory.com/363",
+      "type": "citation"
+    },
+    {
+      "id": "citation:interrupts:https://recipes.tistory.com/367",
+      "source": "interrupts",
+      "target": "source:https://recipes.tistory.com/367",
+      "type": "citation"
+    },
+    {
+      "id": "citation:interrupts:https://recipes.tistory.com/369",
+      "source": "interrupts",
+      "target": "source:https://recipes.tistory.com/369",
+      "type": "citation"
+    },
+    {
+      "id": "citation:lcd:https://recipes.tistory.com/211",
+      "source": "lcd",
+      "target": "source:https://recipes.tistory.com/211",
+      "type": "citation"
+    },
+    {
+      "id": "citation:lcd:https://recipes.tistory.com/377",
+      "source": "lcd",
+      "target": "source:https://recipes.tistory.com/377",
+      "type": "citation"
+    },
+    {
+      "id": "citation:libraries:https://recipes.tistory.com/217",
+      "source": "libraries",
+      "target": "source:https://recipes.tistory.com/217",
+      "type": "citation"
+    },
+    {
+      "id": "citation:libraries:https://recipes.tistory.com/229",
+      "source": "libraries",
+      "target": "source:https://recipes.tistory.com/229",
+      "type": "citation"
+    },
+    {
+      "id": "citation:libraries:https://recipes.tistory.com/232",
+      "source": "libraries",
+      "target": "source:https://recipes.tistory.com/232",
+      "type": "citation"
+    },
+    {
+      "id": "citation:libraries:https://recipes.tistory.com/319",
+      "source": "libraries",
+      "target": "source:https://recipes.tistory.com/319",
+      "type": "citation"
+    },
+    {
+      "id": "citation:libraries:https://recipes.tistory.com/320",
+      "source": "libraries",
+      "target": "source:https://recipes.tistory.com/320",
+      "type": "citation"
+    },
+    {
+      "id": "citation:linker-map:https://recipes.tistory.com/215",
+      "source": "linker-map",
+      "target": "source:https://recipes.tistory.com/215",
+      "type": "citation"
+    },
+    {
+      "id": "citation:linker-map:https://recipes.tistory.com/323",
+      "source": "linker-map",
+      "target": "source:https://recipes.tistory.com/323",
+      "type": "citation"
+    },
+    {
+      "id": "citation:linker-map:https://recipes.tistory.com/324",
+      "source": "linker-map",
+      "target": "source:https://recipes.tistory.com/324",
+      "type": "citation"
+    },
+    {
+      "id": "citation:linker-map:https://recipes.tistory.com/325",
+      "source": "linker-map",
+      "target": "source:https://recipes.tistory.com/325",
+      "type": "citation"
+    },
+    {
+      "id": "citation:linker-map:https://recipes.tistory.com/326",
+      "source": "linker-map",
+      "target": "source:https://recipes.tistory.com/326",
+      "type": "citation"
+    },
+    {
+      "id": "citation:linker-map:https://recipes.tistory.com/327",
+      "source": "linker-map",
+      "target": "source:https://recipes.tistory.com/327",
+      "type": "citation"
+    },
+    {
+      "id": "citation:linker-map:https://recipes.tistory.com/328",
+      "source": "linker-map",
+      "target": "source:https://recipes.tistory.com/328",
+      "type": "citation"
+    },
+    {
+      "id": "citation:linux-process:https://man7.org/linux/man-pages/man2/wait.2.html",
+      "source": "linux-process",
+      "target": "source:https://man7.org/linux/man-pages/man2/wait.2.html",
+      "type": "citation"
+    },
+    {
+      "id": "citation:linux-process:https://recipes.tistory.com/222",
+      "source": "linux-process",
+      "target": "source:https://recipes.tistory.com/222",
+      "type": "citation"
+    },
+    {
+      "id": "citation:linux-process:https://recipes.tistory.com/223",
+      "source": "linux-process",
+      "target": "source:https://recipes.tistory.com/223",
+      "type": "citation"
+    },
+    {
+      "id": "citation:linux-process:https://recipes.tistory.com/60",
+      "source": "linux-process",
+      "target": "source:https://recipes.tistory.com/60",
+      "type": "citation"
+    },
+    {
+      "id": "citation:logic-gates:https://recipes.tistory.com/272",
+      "source": "logic-gates",
+      "target": "source:https://recipes.tistory.com/272",
+      "type": "citation"
+    },
+    {
+      "id": "citation:logic-gates:https://recipes.tistory.com/289",
+      "source": "logic-gates",
+      "target": "source:https://recipes.tistory.com/289",
+      "type": "citation"
+    },
+    {
+      "id": "citation:logic-gates:https://recipes.tistory.com/292",
+      "source": "logic-gates",
+      "target": "source:https://recipes.tistory.com/292",
+      "type": "citation"
+    },
+    {
+      "id": "citation:logic-levels:https://recipes.tistory.com/286",
+      "source": "logic-levels",
+      "target": "source:https://recipes.tistory.com/286",
+      "type": "citation"
+    },
+    {
+      "id": "citation:logic-levels:https://recipes.tistory.com/292",
+      "source": "logic-levels",
+      "target": "source:https://recipes.tistory.com/292",
+      "type": "citation"
+    },
+    {
+      "id": "citation:logic-levels:https://recipes.tistory.com/297",
+      "source": "logic-levels",
+      "target": "source:https://recipes.tistory.com/297",
+      "type": "citation"
+    },
+    {
+      "id": "citation:make-build:https://recipes.tistory.com/214",
+      "source": "make-build",
+      "target": "source:https://recipes.tistory.com/214",
+      "type": "citation"
+    },
+    {
+      "id": "citation:make-build:https://recipes.tistory.com/329",
+      "source": "make-build",
+      "target": "source:https://recipes.tistory.com/329",
+      "type": "citation"
+    },
+    {
+      "id": "citation:make-build:https://recipes.tistory.com/330",
+      "source": "make-build",
+      "target": "source:https://recipes.tistory.com/330",
+      "type": "citation"
+    },
+    {
+      "id": "citation:make-build:https://recipes.tistory.com/331",
+      "source": "make-build",
+      "target": "source:https://recipes.tistory.com/331",
+      "type": "citation"
+    },
+    {
+      "id": "citation:make-build:https://recipes.tistory.com/332",
+      "source": "make-build",
+      "target": "source:https://recipes.tistory.com/332",
+      "type": "citation"
+    },
+    {
+      "id": "citation:memory-bus:https://recipes.tistory.com/296",
+      "source": "memory-bus",
+      "target": "source:https://recipes.tistory.com/296",
+      "type": "citation"
+    },
+    {
+      "id": "citation:memory-bus:https://recipes.tistory.com/299",
+      "source": "memory-bus",
+      "target": "source:https://recipes.tistory.com/299",
+      "type": "citation"
+    },
+    {
+      "id": "citation:memory-bus:https://recipes.tistory.com/375",
+      "source": "memory-bus",
+      "target": "source:https://recipes.tistory.com/375",
+      "type": "citation"
+    },
+    {
+      "id": "citation:memory-bus:https://recipes.tistory.com/376",
+      "source": "memory-bus",
+      "target": "source:https://recipes.tistory.com/376",
+      "type": "citation"
+    },
+    {
+      "id": "citation:memory-bus:https://recipes.tistory.com/381",
+      "source": "memory-bus",
+      "target": "source:https://recipes.tistory.com/381",
+      "type": "citation"
+    },
+    {
+      "id": "citation:memory-protection:https://recipes.tistory.com/220",
+      "source": "memory-protection",
+      "target": "source:https://recipes.tistory.com/220",
+      "type": "citation"
+    },
+    {
+      "id": "citation:memory-protection:https://recipes.tistory.com/386",
+      "source": "memory-protection",
+      "target": "source:https://recipes.tistory.com/386",
+      "type": "citation"
+    },
+    {
+      "id": "citation:memory-protection:https://recipes.tistory.com/60",
+      "source": "memory-protection",
+      "target": "source:https://recipes.tistory.com/60",
+      "type": "citation"
+    },
+    {
+      "id": "citation:mmio:https://recipes.tistory.com/199",
+      "source": "mmio",
+      "target": "source:https://recipes.tistory.com/199",
+      "type": "citation"
+    },
+    {
+      "id": "citation:mmio:https://recipes.tistory.com/373",
+      "source": "mmio",
+      "target": "source:https://recipes.tistory.com/373",
+      "type": "citation"
+    },
+    {
+      "id": "citation:mmio:https://recipes.tistory.com/374",
+      "source": "mmio",
+      "target": "source:https://recipes.tistory.com/374",
+      "type": "citation"
+    },
+    {
+      "id": "citation:mmio:https://recipes.tistory.com/378",
+      "source": "mmio",
+      "target": "source:https://recipes.tistory.com/378",
+      "type": "citation"
+    },
+    {
+      "id": "citation:mmio:https://recipes.tistory.com/379",
+      "source": "mmio",
+      "target": "source:https://recipes.tistory.com/379",
+      "type": "citation"
+    },
+    {
+      "id": "citation:object-model:https://recipes.tistory.com/217",
+      "source": "object-model",
+      "target": "source:https://recipes.tistory.com/217",
+      "type": "citation"
+    },
+    {
+      "id": "citation:object-model:https://recipes.tistory.com/347",
+      "source": "object-model",
+      "target": "source:https://recipes.tistory.com/347",
+      "type": "citation"
+    },
+    {
+      "id": "citation:object-model:https://recipes.tistory.com/60",
+      "source": "object-model",
+      "target": "source:https://recipes.tistory.com/60",
+      "type": "citation"
+    },
+    {
+      "id": "citation:ohms-law:https://recipes.tistory.com/287",
+      "source": "ohms-law",
+      "target": "source:https://recipes.tistory.com/287",
+      "type": "citation"
+    },
+    {
+      "id": "citation:ohms-law:https://recipes.tistory.com/71",
+      "source": "ohms-law",
+      "target": "source:https://recipes.tistory.com/71",
+      "type": "citation"
+    },
+    {
+      "id": "citation:open-drain:https://recipes.tistory.com/290",
+      "source": "open-drain",
+      "target": "source:https://recipes.tistory.com/290",
+      "type": "citation"
+    },
+    {
+      "id": "citation:open-drain:https://recipes.tistory.com/383",
+      "source": "open-drain",
+      "target": "source:https://recipes.tistory.com/383",
+      "type": "citation"
+    },
+    {
+      "id": "citation:pointers-structs:https://recipes.tistory.com/346",
+      "source": "pointers-structs",
+      "target": "source:https://recipes.tistory.com/346",
+      "type": "citation"
+    },
+    {
+      "id": "citation:pointers-structs:https://recipes.tistory.com/347",
+      "source": "pointers-structs",
+      "target": "source:https://recipes.tistory.com/347",
+      "type": "citation"
+    },
+    {
+      "id": "citation:pointers-structs:https://recipes.tistory.com/353",
+      "source": "pointers-structs",
+      "target": "source:https://recipes.tistory.com/353",
+      "type": "citation"
+    },
+    {
+      "id": "citation:pointers-structs:https://recipes.tistory.com/60",
+      "source": "pointers-structs",
+      "target": "source:https://recipes.tistory.com/60",
+      "type": "citation"
+    },
+    {
+      "id": "citation:porting-bsp:https://recipes.tistory.com/224",
+      "source": "porting-bsp",
+      "target": "source:https://recipes.tistory.com/224",
+      "type": "citation"
+    },
+    {
+      "id": "citation:porting-bsp:https://recipes.tistory.com/225",
+      "source": "porting-bsp",
+      "target": "source:https://recipes.tistory.com/225",
+      "type": "citation"
+    },
+    {
+      "id": "citation:porting-bsp:https://recipes.tistory.com/226",
+      "source": "porting-bsp",
+      "target": "source:https://recipes.tistory.com/226",
+      "type": "citation"
+    },
+    {
+      "id": "citation:porting-bsp:https://recipes.tistory.com/228",
+      "source": "porting-bsp",
+      "target": "source:https://recipes.tistory.com/228",
+      "type": "citation"
+    },
+    {
+      "id": "citation:porting-bsp:https://recipes.tistory.com/230",
+      "source": "porting-bsp",
+      "target": "source:https://recipes.tistory.com/230",
+      "type": "citation"
+    },
+    {
+      "id": "citation:porting-bsp:https://recipes.tistory.com/231",
+      "source": "porting-bsp",
+      "target": "source:https://recipes.tistory.com/231",
+      "type": "citation"
+    },
+    {
+      "id": "citation:porting-bsp:https://recipes.tistory.com/372",
+      "source": "porting-bsp",
+      "target": "source:https://recipes.tistory.com/372",
+      "type": "citation"
+    },
+    {
+      "id": "citation:power-regulators:https://recipes.tistory.com/291",
+      "source": "power-regulators",
+      "target": "source:https://recipes.tistory.com/291",
+      "type": "citation"
+    },
+    {
+      "id": "citation:power-regulators:https://recipes.tistory.com/60",
+      "source": "power-regulators",
+      "target": "source:https://recipes.tistory.com/60",
+      "type": "citation"
+    },
+    {
+      "id": "citation:power-regulators:https://www.ti.com/lit/wp/slpy005/slpy005.pdf",
+      "source": "power-regulators",
+      "target": "source:https://www.ti.com/lit/wp/slpy005/slpy005.pdf",
+      "type": "citation"
+    },
+    {
+      "id": "citation:pull-down:https://recipes.tistory.com/290",
+      "source": "pull-down",
+      "target": "source:https://recipes.tistory.com/290",
+      "type": "citation"
+    },
+    {
+      "id": "citation:pull-down:https://recipes.tistory.com/383",
+      "source": "pull-down",
+      "target": "source:https://recipes.tistory.com/383",
+      "type": "citation"
+    },
+    {
+      "id": "citation:pull-down:https://recipes.tistory.com/71",
+      "source": "pull-down",
+      "target": "source:https://recipes.tistory.com/71",
+      "type": "citation"
+    },
+    {
+      "id": "citation:pull-sizing:https://recipes.tistory.com/290",
+      "source": "pull-sizing",
+      "target": "source:https://recipes.tistory.com/290",
+      "type": "citation"
+    },
+    {
+      "id": "citation:pull-sizing:https://recipes.tistory.com/58",
+      "source": "pull-sizing",
+      "target": "source:https://recipes.tistory.com/58",
+      "type": "citation"
+    },
+    {
+      "id": "citation:pull-sizing:https://recipes.tistory.com/71",
+      "source": "pull-sizing",
+      "target": "source:https://recipes.tistory.com/71",
+      "type": "citation"
+    },
+    {
+      "id": "citation:pull-up:https://recipes.tistory.com/290",
+      "source": "pull-up",
+      "target": "source:https://recipes.tistory.com/290",
+      "type": "citation"
+    },
+    {
+      "id": "citation:pull-up:https://recipes.tistory.com/383",
+      "source": "pull-up",
+      "target": "source:https://recipes.tistory.com/383",
+      "type": "citation"
+    },
+    {
+      "id": "citation:pull-up:https://recipes.tistory.com/71",
+      "source": "pull-up",
+      "target": "source:https://recipes.tistory.com/71",
+      "type": "citation"
+    },
+    {
+      "id": "citation:pwm:https://recipes.tistory.com/199",
+      "source": "pwm",
+      "target": "source:https://recipes.tistory.com/199",
+      "type": "citation"
+    },
+    {
+      "id": "citation:pwm:https://recipes.tistory.com/295",
+      "source": "pwm",
+      "target": "source:https://recipes.tistory.com/295",
+      "type": "citation"
+    },
+    {
+      "id": "citation:pwm:https://recipes.tistory.com/60",
+      "source": "pwm",
+      "target": "source:https://recipes.tistory.com/60",
+      "type": "citation"
+    },
+    {
+      "id": "citation:queues:https://recipes.tistory.com/354",
+      "source": "queues",
+      "target": "source:https://recipes.tistory.com/354",
+      "type": "citation"
+    },
+    {
+      "id": "citation:queues:https://recipes.tistory.com/368",
+      "source": "queues",
+      "target": "source:https://recipes.tistory.com/368",
+      "type": "citation"
+    },
+    {
+      "id": "citation:queues:https://recipes.tistory.com/60",
+      "source": "queues",
+      "target": "source:https://recipes.tistory.com/60",
+      "type": "citation"
+    },
+    {
+      "id": "citation:rc-filter:https://recipes.tistory.com/288",
+      "source": "rc-filter",
+      "target": "source:https://recipes.tistory.com/288",
+      "type": "citation"
+    },
+    {
+      "id": "citation:rc-filter:https://recipes.tistory.com/58",
+      "source": "rc-filter",
+      "target": "source:https://recipes.tistory.com/58",
+      "type": "citation"
+    },
+    {
+      "id": "citation:rc-filter:https://recipes.tistory.com/61",
+      "source": "rc-filter",
+      "target": "source:https://recipes.tistory.com/61",
+      "type": "citation"
+    },
+    {
+      "id": "citation:rc-transient:https://recipes.tistory.com/287",
+      "source": "rc-transient",
+      "target": "source:https://recipes.tistory.com/287",
+      "type": "citation"
+    },
+    {
+      "id": "citation:rc-transient:https://recipes.tistory.com/57",
+      "source": "rc-transient",
+      "target": "source:https://recipes.tistory.com/57",
+      "type": "citation"
+    },
+    {
+      "id": "citation:rc-transient:https://recipes.tistory.com/58",
+      "source": "rc-transient",
+      "target": "source:https://recipes.tistory.com/58",
+      "type": "citation"
+    },
+    {
+      "id": "citation:rc-transient:https://recipes.tistory.com/61",
+      "source": "rc-transient",
+      "target": "source:https://recipes.tistory.com/61",
+      "type": "citation"
+    },
+    {
+      "id": "citation:registers:https://recipes.tistory.com/292",
+      "source": "registers",
+      "target": "source:https://recipes.tistory.com/292",
+      "type": "citation"
+    },
+    {
+      "id": "citation:registers:https://recipes.tistory.com/294",
+      "source": "registers",
+      "target": "source:https://recipes.tistory.com/294",
+      "type": "citation"
+    },
+    {
+      "id": "citation:registers:https://recipes.tistory.com/374",
+      "source": "registers",
+      "target": "source:https://recipes.tistory.com/374",
+      "type": "citation"
+    },
+    {
+      "id": "citation:reset-boot:https://recipes.tistory.com/213",
+      "source": "reset-boot",
+      "target": "source:https://recipes.tistory.com/213",
+      "type": "citation"
+    },
+    {
+      "id": "citation:reset-boot:https://recipes.tistory.com/342",
+      "source": "reset-boot",
+      "target": "source:https://recipes.tistory.com/342",
+      "type": "citation"
+    },
+    {
+      "id": "citation:reset-boot:https://recipes.tistory.com/343",
+      "source": "reset-boot",
+      "target": "source:https://recipes.tistory.com/343",
+      "type": "citation"
+    },
+    {
+      "id": "citation:reset-boot:https://recipes.tistory.com/344",
+      "source": "reset-boot",
+      "target": "source:https://recipes.tistory.com/344",
+      "type": "citation"
+    },
+    {
+      "id": "citation:reset-boot:https://recipes.tistory.com/371",
+      "source": "reset-boot",
+      "target": "source:https://recipes.tistory.com/371",
+      "type": "citation"
+    },
+    {
+      "id": "citation:rtos-tasks:https://recipes.tistory.com/222",
+      "source": "rtos-tasks",
+      "target": "source:https://recipes.tistory.com/222",
+      "type": "citation"
+    },
+    {
+      "id": "citation:rtos-tasks:https://recipes.tistory.com/223",
+      "source": "rtos-tasks",
+      "target": "source:https://recipes.tistory.com/223",
+      "type": "citation"
+    },
+    {
+      "id": "citation:rtos-tasks:https://recipes.tistory.com/355",
+      "source": "rtos-tasks",
+      "target": "source:https://recipes.tistory.com/355",
+      "type": "citation"
+    },
+    {
+      "id": "citation:rtos-tasks:https://recipes.tistory.com/356",
+      "source": "rtos-tasks",
+      "target": "source:https://recipes.tistory.com/356",
+      "type": "citation"
+    },
+    {
+      "id": "citation:rtos-tasks:https://recipes.tistory.com/357",
+      "source": "rtos-tasks",
+      "target": "source:https://recipes.tistory.com/357",
+      "type": "citation"
+    },
+    {
+      "id": "citation:rtos-tasks:https://recipes.tistory.com/358",
+      "source": "rtos-tasks",
+      "target": "source:https://recipes.tistory.com/358",
+      "type": "citation"
+    },
+    {
+      "id": "citation:rtos-tasks:https://recipes.tistory.com/371",
+      "source": "rtos-tasks",
+      "target": "source:https://recipes.tistory.com/371",
+      "type": "citation"
+    },
+    {
+      "id": "citation:scheduler:https://recipes.tistory.com/359",
+      "source": "scheduler",
+      "target": "source:https://recipes.tistory.com/359",
+      "type": "citation"
+    },
+    {
+      "id": "citation:scheduler:https://recipes.tistory.com/360",
+      "source": "scheduler",
+      "target": "source:https://recipes.tistory.com/360",
+      "type": "citation"
+    },
+    {
+      "id": "citation:scheduler:https://recipes.tistory.com/361",
+      "source": "scheduler",
+      "target": "source:https://recipes.tistory.com/361",
+      "type": "citation"
+    },
+    {
+      "id": "citation:scheduler:https://recipes.tistory.com/362",
+      "source": "scheduler",
+      "target": "source:https://recipes.tistory.com/362",
+      "type": "citation"
+    },
+    {
+      "id": "citation:scheduler:https://recipes.tistory.com/364",
+      "source": "scheduler",
+      "target": "source:https://recipes.tistory.com/364",
+      "type": "citation"
+    },
+    {
+      "id": "citation:serial-uart:https://recipes.tistory.com/210",
+      "source": "serial-uart",
+      "target": "source:https://recipes.tistory.com/210",
+      "type": "citation"
+    },
+    {
+      "id": "citation:serial-uart:https://recipes.tistory.com/380",
+      "source": "serial-uart",
+      "target": "source:https://recipes.tistory.com/380",
+      "type": "citation"
+    },
+    {
+      "id": "citation:serial-uart:https://recipes.tistory.com/60",
+      "source": "serial-uart",
+      "target": "source:https://recipes.tistory.com/60",
+      "type": "citation"
+    },
+    {
+      "id": "citation:series-parallel:https://recipes.tistory.com/287",
+      "source": "series-parallel",
+      "target": "source:https://recipes.tistory.com/287",
+      "type": "citation"
+    },
+    {
+      "id": "citation:series-parallel:https://recipes.tistory.com/57",
+      "source": "series-parallel",
+      "target": "source:https://recipes.tistory.com/57",
+      "type": "citation"
+    },
+    {
+      "id": "citation:series-parallel:https://recipes.tistory.com/71",
+      "source": "series-parallel",
+      "target": "source:https://recipes.tistory.com/71",
+      "type": "citation"
+    },
+    {
+      "id": "citation:signal-integrity:https://recipes.tistory.com/285",
+      "source": "signal-integrity",
+      "target": "source:https://recipes.tistory.com/285",
+      "type": "citation"
+    },
+    {
+      "id": "citation:signal-integrity:https://recipes.tistory.com/297",
+      "source": "signal-integrity",
+      "target": "source:https://recipes.tistory.com/297",
+      "type": "citation"
+    },
+    {
+      "id": "citation:signal-integrity:https://recipes.tistory.com/60",
+      "source": "signal-integrity",
+      "target": "source:https://recipes.tistory.com/60",
+      "type": "citation"
+    },
+    {
+      "id": "citation:signals-frequency:https://recipes.tistory.com/285",
+      "source": "signals-frequency",
+      "target": "source:https://recipes.tistory.com/285",
+      "type": "citation"
+    },
+    {
+      "id": "citation:signals-frequency:https://recipes.tistory.com/286",
+      "source": "signals-frequency",
+      "target": "source:https://recipes.tistory.com/286",
+      "type": "citation"
+    },
+    {
+      "id": "citation:signals-frequency:https://recipes.tistory.com/295",
+      "source": "signals-frequency",
+      "target": "source:https://recipes.tistory.com/295",
+      "type": "citation"
+    },
+    {
+      "id": "citation:switch-debounce:https://recipes.tistory.com/383",
+      "source": "switch-debounce",
+      "target": "source:https://recipes.tistory.com/383",
+      "type": "citation"
+    },
+    {
+      "id": "citation:switch-debounce:https://recipes.tistory.com/58",
+      "source": "switch-debounce",
+      "target": "source:https://recipes.tistory.com/58",
+      "type": "citation"
+    },
+    {
+      "id": "citation:switch-debounce:https://recipes.tistory.com/61",
+      "source": "switch-debounce",
+      "target": "source:https://recipes.tistory.com/61",
+      "type": "citation"
+    },
+    {
+      "id": "citation:synchronization:https://recipes.tistory.com/337",
+      "source": "synchronization",
+      "target": "source:https://recipes.tistory.com/337",
+      "type": "citation"
+    },
+    {
+      "id": "citation:synchronization:https://recipes.tistory.com/366",
+      "source": "synchronization",
+      "target": "source:https://recipes.tistory.com/366",
+      "type": "citation"
+    },
+    {
+      "id": "citation:synchronization:https://recipes.tistory.com/60",
+      "source": "synchronization",
+      "target": "source:https://recipes.tistory.com/60",
+      "type": "citation"
+    },
+    {
+      "id": "citation:timers-watchdog:https://recipes.tistory.com/365",
+      "source": "timers-watchdog",
+      "target": "source:https://recipes.tistory.com/365",
+      "type": "citation"
+    },
+    {
+      "id": "citation:timers-watchdog:https://recipes.tistory.com/370",
+      "source": "timers-watchdog",
+      "target": "source:https://recipes.tistory.com/370",
+      "type": "citation"
+    },
+    {
+      "id": "citation:timers-watchdog:https://recipes.tistory.com/60",
+      "source": "timers-watchdog",
+      "target": "source:https://recipes.tistory.com/60",
+      "type": "citation"
+    },
+    {
+      "id": "citation:timing:https://recipes.tistory.com/293",
+      "source": "timing",
+      "target": "source:https://recipes.tistory.com/293",
+      "type": "citation"
+    },
+    {
+      "id": "citation:timing:https://recipes.tistory.com/295",
+      "source": "timing",
+      "target": "source:https://recipes.tistory.com/295",
+      "type": "citation"
+    },
+    {
+      "id": "citation:timing:https://recipes.tistory.com/297",
+      "source": "timing",
+      "target": "source:https://recipes.tistory.com/297",
+      "type": "citation"
+    },
+    {
+      "id": "citation:transistor-amplifier:https://recipes.tistory.com/289",
+      "source": "transistor-amplifier",
+      "target": "source:https://recipes.tistory.com/289",
+      "type": "citation"
+    },
+    {
+      "id": "citation:transistor-amplifier:https://recipes.tistory.com/65",
+      "source": "transistor-amplifier",
+      "target": "source:https://recipes.tistory.com/65",
+      "type": "citation"
+    },
+    {
+      "id": "citation:transistor-amplifier:https://recipes.tistory.com/66",
+      "source": "transistor-amplifier",
+      "target": "source:https://recipes.tistory.com/66",
+      "type": "citation"
+    },
+    {
+      "id": "citation:transistor-switch:https://recipes.tistory.com/289",
+      "source": "transistor-switch",
+      "target": "source:https://recipes.tistory.com/289",
+      "type": "citation"
+    },
+    {
+      "id": "citation:transistor-switch:https://recipes.tistory.com/291",
+      "source": "transistor-switch",
+      "target": "source:https://recipes.tistory.com/291",
+      "type": "citation"
+    },
+    {
+      "id": "citation:transistor-switch:https://recipes.tistory.com/65",
+      "source": "transistor-switch",
+      "target": "source:https://recipes.tistory.com/65",
+      "type": "citation"
+    },
+    {
+      "id": "citation:transistor-switch:https://recipes.tistory.com/66",
+      "source": "transistor-switch",
+      "target": "source:https://recipes.tistory.com/66",
+      "type": "citation"
+    },
+    {
+      "id": "citation:usb-basics:https://learn.microsoft.com/en-us/windows-hardware/drivers/usbcon/usb-device-descriptors",
+      "source": "usb-basics",
+      "target": "source:https://learn.microsoft.com/en-us/windows-hardware/drivers/usbcon/usb-device-descriptors",
+      "type": "citation"
+    },
+    {
+      "id": "citation:usb-basics:https://recipes.tistory.com/60",
+      "source": "usb-basics",
+      "target": "source:https://recipes.tistory.com/60",
+      "type": "citation"
+    },
+    {
+      "id": "citation:usb-basics:https://www.usb.org/defined-class-codes",
+      "source": "usb-basics",
+      "target": "source:https://www.usb.org/defined-class-codes",
+      "type": "citation"
+    },
+    {
+      "id": "citation:voltage-divider:https://recipes.tistory.com/57",
+      "source": "voltage-divider",
+      "target": "source:https://recipes.tistory.com/57",
+      "type": "citation"
+    },
+    {
+      "id": "citation:voltage-divider:https://recipes.tistory.com/66",
+      "source": "voltage-divider",
+      "target": "source:https://recipes.tistory.com/66",
+      "type": "citation"
+    },
+    {
+      "id": "citation:voltage-divider:https://recipes.tistory.com/71",
+      "source": "voltage-divider",
+      "target": "source:https://recipes.tistory.com/71",
+      "type": "citation"
+    },
+    {
+      "id": "citation:zener-power:https://recipes.tistory.com/62",
+      "source": "zener-power",
+      "target": "source:https://recipes.tistory.com/62",
+      "type": "citation"
+    },
+    {
+      "id": "citation:zener-power:https://recipes.tistory.com/63",
+      "source": "zener-power",
+      "target": "source:https://recipes.tistory.com/63",
+      "type": "citation"
+    },
+    {
+      "id": "contains:components:capacitor",
+      "source": "category:components",
+      "target": "capacitor",
+      "type": "contains"
+    },
+    {
+      "id": "contains:components:charge-pump",
+      "source": "category:components",
+      "target": "charge-pump",
+      "type": "contains"
+    },
+    {
+      "id": "contains:components:decoupling",
+      "source": "category:components",
+      "target": "decoupling",
+      "type": "contains"
+    },
+    {
+      "id": "contains:components:diode-led",
+      "source": "category:components",
+      "target": "diode-led",
+      "type": "contains"
+    },
+    {
+      "id": "contains:components:impedance",
+      "source": "category:components",
+      "target": "impedance",
+      "type": "contains"
+    },
+    {
+      "id": "contains:components:inductor",
+      "source": "category:components",
+      "target": "inductor",
+      "type": "contains"
+    },
+    {
+      "id": "contains:components:power-regulators",
+      "source": "category:components",
+      "target": "power-regulators",
+      "type": "contains"
+    },
+    {
+      "id": "contains:components:rc-filter",
+      "source": "category:components",
+      "target": "rc-filter",
+      "type": "contains"
+    },
+    {
+      "id": "contains:components:rc-transient",
+      "source": "category:components",
+      "target": "rc-transient",
+      "type": "contains"
+    },
+    {
+      "id": "contains:components:transistor-amplifier",
+      "source": "category:components",
+      "target": "transistor-amplifier",
+      "type": "contains"
+    },
+    {
+      "id": "contains:components:transistor-switch",
+      "source": "category:components",
+      "target": "transistor-switch",
+      "type": "contains"
+    },
+    {
+      "id": "contains:components:zener-power",
+      "source": "category:components",
+      "target": "zener-power",
+      "type": "contains"
+    },
+    {
+      "id": "contains:digital:floating-input",
+      "source": "category:digital",
+      "target": "floating-input",
+      "type": "contains"
+    },
+    {
+      "id": "contains:digital:logic-gates",
+      "source": "category:digital",
+      "target": "logic-gates",
+      "type": "contains"
+    },
+    {
+      "id": "contains:digital:logic-levels",
+      "source": "category:digital",
+      "target": "logic-levels",
+      "type": "contains"
+    },
+    {
+      "id": "contains:digital:open-drain",
+      "source": "category:digital",
+      "target": "open-drain",
+      "type": "contains"
+    },
+    {
+      "id": "contains:digital:pull-down",
+      "source": "category:digital",
+      "target": "pull-down",
+      "type": "contains"
+    },
+    {
+      "id": "contains:digital:pull-sizing",
+      "source": "category:digital",
+      "target": "pull-sizing",
+      "type": "contains"
+    },
+    {
+      "id": "contains:digital:pull-up",
+      "source": "category:digital",
+      "target": "pull-up",
+      "type": "contains"
+    },
+    {
+      "id": "contains:digital:registers",
+      "source": "category:digital",
+      "target": "registers",
+      "type": "contains"
+    },
+    {
+      "id": "contains:digital:signal-integrity",
+      "source": "category:digital",
+      "target": "signal-integrity",
+      "type": "contains"
+    },
+    {
+      "id": "contains:digital:switch-debounce",
+      "source": "category:digital",
+      "target": "switch-debounce",
+      "type": "contains"
+    },
+    {
+      "id": "contains:digital:timing",
+      "source": "category:digital",
+      "target": "timing",
+      "type": "contains"
+    },
+    {
+      "id": "contains:electricity:current-loop",
+      "source": "category:electricity",
+      "target": "current-loop",
+      "type": "contains"
+    },
+    {
+      "id": "contains:electricity:electrical-power",
+      "source": "category:electricity",
+      "target": "electrical-power",
+      "type": "contains"
+    },
+    {
+      "id": "contains:electricity:ground-reference",
+      "source": "category:electricity",
+      "target": "ground-reference",
+      "type": "contains"
+    },
+    {
+      "id": "contains:electricity:ohms-law",
+      "source": "category:electricity",
+      "target": "ohms-law",
+      "type": "contains"
+    },
+    {
+      "id": "contains:electricity:series-parallel",
+      "source": "category:electricity",
+      "target": "series-parallel",
+      "type": "contains"
+    },
+    {
+      "id": "contains:electricity:signals-frequency",
+      "source": "category:electricity",
+      "target": "signals-frequency",
+      "type": "contains"
+    },
+    {
+      "id": "contains:electricity:voltage-divider",
+      "source": "category:electricity",
+      "target": "voltage-divider",
+      "type": "contains"
+    },
+    {
+      "id": "contains:firmware:android-stack",
+      "source": "category:firmware",
+      "target": "android-stack",
+      "type": "contains"
+    },
+    {
+      "id": "contains:firmware:asm-abi",
+      "source": "category:firmware",
+      "target": "asm-abi",
+      "type": "contains"
+    },
+    {
+      "id": "contains:firmware:c-memory",
+      "source": "category:firmware",
+      "target": "c-memory",
+      "type": "contains"
+    },
+    {
+      "id": "contains:firmware:compile-pipeline",
+      "source": "category:firmware",
+      "target": "compile-pipeline",
+      "type": "contains"
+    },
+    {
+      "id": "contains:firmware:debugging",
+      "source": "category:firmware",
+      "target": "debugging",
+      "type": "contains"
+    },
+    {
+      "id": "contains:firmware:dev-environment",
+      "source": "category:firmware",
+      "target": "dev-environment",
+      "type": "contains"
+    },
+    {
+      "id": "contains:firmware:device-drivers",
+      "source": "category:firmware",
+      "target": "device-drivers",
+      "type": "contains"
+    },
+    {
+      "id": "contains:firmware:dynamic-allocation",
+      "source": "category:firmware",
+      "target": "dynamic-allocation",
+      "type": "contains"
+    },
+    {
+      "id": "contains:firmware:endian",
+      "source": "category:firmware",
+      "target": "endian",
+      "type": "contains"
+    },
+    {
+      "id": "contains:firmware:libraries",
+      "source": "category:firmware",
+      "target": "libraries",
+      "type": "contains"
+    },
+    {
+      "id": "contains:firmware:linker-map",
+      "source": "category:firmware",
+      "target": "linker-map",
+      "type": "contains"
+    },
+    {
+      "id": "contains:firmware:linux-process",
+      "source": "category:firmware",
+      "target": "linux-process",
+      "type": "contains"
+    },
+    {
+      "id": "contains:firmware:make-build",
+      "source": "category:firmware",
+      "target": "make-build",
+      "type": "contains"
+    },
+    {
+      "id": "contains:firmware:object-model",
+      "source": "category:firmware",
+      "target": "object-model",
+      "type": "contains"
+    },
+    {
+      "id": "contains:firmware:pointers-structs",
+      "source": "category:firmware",
+      "target": "pointers-structs",
+      "type": "contains"
+    },
+    {
+      "id": "contains:firmware:porting-bsp",
+      "source": "category:firmware",
+      "target": "porting-bsp",
+      "type": "contains"
+    },
+    {
+      "id": "contains:firmware:queues",
+      "source": "category:firmware",
+      "target": "queues",
+      "type": "contains"
+    },
+    {
+      "id": "contains:firmware:reset-boot",
+      "source": "category:firmware",
+      "target": "reset-boot",
+      "type": "contains"
+    },
+    {
+      "id": "contains:firmware:rtos-tasks",
+      "source": "category:firmware",
+      "target": "rtos-tasks",
+      "type": "contains"
+    },
+    {
+      "id": "contains:firmware:scheduler",
+      "source": "category:firmware",
+      "target": "scheduler",
+      "type": "contains"
+    },
+    {
+      "id": "contains:firmware:synchronization",
+      "source": "category:firmware",
+      "target": "synchronization",
+      "type": "contains"
+    },
+    {
+      "id": "contains:firmware:timers-watchdog",
+      "source": "category:firmware",
+      "target": "timers-watchdog",
+      "type": "contains"
+    },
+    {
+      "id": "contains:interfaces:adc",
+      "source": "category:interfaces",
+      "target": "adc",
+      "type": "contains"
+    },
+    {
+      "id": "contains:interfaces:buses-i2c-spi",
+      "source": "category:interfaces",
+      "target": "buses-i2c-spi",
+      "type": "contains"
+    },
+    {
+      "id": "contains:interfaces:debug-jtag",
+      "source": "category:interfaces",
+      "target": "debug-jtag",
+      "type": "contains"
+    },
+    {
+      "id": "contains:interfaces:lcd",
+      "source": "category:interfaces",
+      "target": "lcd",
+      "type": "contains"
+    },
+    {
+      "id": "contains:interfaces:pwm",
+      "source": "category:interfaces",
+      "target": "pwm",
+      "type": "contains"
+    },
+    {
+      "id": "contains:interfaces:serial-uart",
+      "source": "category:interfaces",
+      "target": "serial-uart",
+      "type": "contains"
+    },
+    {
+      "id": "contains:interfaces:usb-basics",
+      "source": "category:interfaces",
+      "target": "usb-basics",
+      "type": "contains"
+    },
+    {
+      "id": "contains:mcu:arm-context",
+      "source": "category:mcu",
+      "target": "arm-context",
+      "type": "contains"
+    },
+    {
+      "id": "contains:mcu:arm-modes",
+      "source": "category:mcu",
+      "target": "arm-modes",
+      "type": "contains"
+    },
+    {
+      "id": "contains:mcu:clocks-pll",
+      "source": "category:mcu",
+      "target": "clocks-pll",
+      "type": "contains"
+    },
+    {
+      "id": "contains:mcu:core-soc",
+      "source": "category:mcu",
+      "target": "core-soc",
+      "type": "contains"
+    },
+    {
+      "id": "contains:mcu:cpu-pipeline",
+      "source": "category:mcu",
+      "target": "cpu-pipeline",
+      "type": "contains"
+    },
+    {
+      "id": "contains:mcu:dma-cache-mmu",
+      "source": "category:mcu",
+      "target": "dma-cache-mmu",
+      "type": "contains"
+    },
+    {
+      "id": "contains:mcu:exceptions",
+      "source": "category:mcu",
+      "target": "exceptions",
+      "type": "contains"
+    },
+    {
+      "id": "contains:mcu:flash-ram",
+      "source": "category:mcu",
+      "target": "flash-ram",
+      "type": "contains"
+    },
+    {
+      "id": "contains:mcu:gpio",
+      "source": "category:mcu",
+      "target": "gpio",
+      "type": "contains"
+    },
+    {
+      "id": "contains:mcu:interrupts",
+      "source": "category:mcu",
+      "target": "interrupts",
+      "type": "contains"
+    },
+    {
+      "id": "contains:mcu:memory-bus",
+      "source": "category:mcu",
+      "target": "memory-bus",
+      "type": "contains"
+    },
+    {
+      "id": "contains:mcu:memory-protection",
+      "source": "category:mcu",
+      "target": "memory-protection",
+      "type": "contains"
+    },
+    {
+      "id": "contains:mcu:mmio",
+      "source": "category:mcu",
+      "target": "mmio",
+      "type": "contains"
+    },
+    {
+      "id": "prerequisite:arm-context:asm-abi",
+      "source": "arm-context",
+      "target": "asm-abi",
+      "type": "prerequisite"
+    },
+    {
+      "id": "prerequisite:arm-context:c-memory",
+      "source": "arm-context",
+      "target": "c-memory",
+      "type": "prerequisite"
+    },
+    {
+      "id": "prerequisite:arm-context:debug-jtag",
+      "source": "arm-context",
+      "target": "debug-jtag",
+      "type": "prerequisite"
+    },
+    {
+      "id": "prerequisite:arm-context:exceptions",
+      "source": "arm-context",
+      "target": "exceptions",
+      "type": "prerequisite"
+    },
+    {
+      "id": "prerequisite:arm-context:scheduler",
+      "source": "arm-context",
+      "target": "scheduler",
+      "type": "prerequisite"
+    },
+    {
+      "id": "prerequisite:arm-modes:arm-context",
+      "source": "arm-modes",
+      "target": "arm-context",
+      "type": "prerequisite"
+    },
+    {
+      "id": "prerequisite:c-memory:compile-pipeline",
+      "source": "c-memory",
+      "target": "compile-pipeline",
+      "type": "prerequisite"
+    },
+    {
+      "id": "prerequisite:c-memory:dynamic-allocation",
+      "source": "c-memory",
+      "target": "dynamic-allocation",
+      "type": "prerequisite"
+    },
+    {
+      "id": "prerequisite:c-memory:linker-map",
+      "source": "c-memory",
+      "target": "linker-map",
+      "type": "prerequisite"
+    },
+    {
+      "id": "prerequisite:c-memory:pointers-structs",
+      "source": "c-memory",
+      "target": "pointers-structs",
+      "type": "prerequisite"
+    },
+    {
+      "id": "prerequisite:c-memory:queues",
+      "source": "c-memory",
+      "target": "queues",
+      "type": "prerequisite"
+    },
+    {
+      "id": "prerequisite:capacitor:charge-pump",
+      "source": "capacitor",
+      "target": "charge-pump",
+      "type": "prerequisite"
+    },
+    {
+      "id": "prerequisite:capacitor:inductor",
+      "source": "capacitor",
+      "target": "inductor",
+      "type": "prerequisite"
+    },
+    {
+      "id": "prerequisite:capacitor:rc-transient",
+      "source": "capacitor",
+      "target": "rc-transient",
+      "type": "prerequisite"
+    },
+    {
+      "id": "prerequisite:clocks-pll:timers-watchdog",
+      "source": "clocks-pll",
+      "target": "timers-watchdog",
+      "type": "prerequisite"
+    },
+    {
+      "id": "prerequisite:compile-pipeline:asm-abi",
+      "source": "compile-pipeline",
+      "target": "asm-abi",
+      "type": "prerequisite"
+    },
+    {
+      "id": "prerequisite:compile-pipeline:libraries",
+      "source": "compile-pipeline",
+      "target": "libraries",
+      "type": "prerequisite"
+    },
+    {
+      "id": "prerequisite:compile-pipeline:make-build",
+      "source": "compile-pipeline",
+      "target": "make-build",
+      "type": "prerequisite"
+    },
+    {
+      "id": "prerequisite:core-soc:cpu-pipeline",
+      "source": "core-soc",
+      "target": "cpu-pipeline",
+      "type": "prerequisite"
+    },
+    {
+      "id": "prerequisite:core-soc:debug-jtag",
+      "source": "core-soc",
+      "target": "debug-jtag",
+      "type": "prerequisite"
+    },
+    {
+      "id": "prerequisite:core-soc:flash-ram",
+      "source": "core-soc",
+      "target": "flash-ram",
+      "type": "prerequisite"
+    },
+    {
+      "id": "prerequisite:cpu-pipeline:arm-modes",
+      "source": "cpu-pipeline",
+      "target": "arm-modes",
+      "type": "prerequisite"
+    },
+    {
+      "id": "prerequisite:cpu-pipeline:compile-pipeline",
+      "source": "cpu-pipeline",
+      "target": "compile-pipeline",
+      "type": "prerequisite"
+    },
+    {
+      "id": "prerequisite:current-loop:ground-reference",
+      "source": "current-loop",
+      "target": "ground-reference",
+      "type": "prerequisite"
+    },
+    {
+      "id": "prerequisite:current-loop:ohms-law",
+      "source": "current-loop",
+      "target": "ohms-law",
+      "type": "prerequisite"
+    },
+    {
+      "id": "prerequisite:debug-jtag:debugging",
+      "source": "debug-jtag",
+      "target": "debugging",
+      "type": "prerequisite"
+    },
+    {
+      "id": "prerequisite:debugging:dev-environment",
+      "source": "debugging",
+      "target": "dev-environment",
+      "type": "prerequisite"
+    },
+    {
+      "id": "prerequisite:device-drivers:android-stack",
+      "source": "device-drivers",
+      "target": "android-stack",
+      "type": "prerequisite"
+    },
+    {
+      "id": "prerequisite:device-drivers:usb-basics",
+      "source": "device-drivers",
+      "target": "usb-basics",
+      "type": "prerequisite"
+    },
+    {
+      "id": "prerequisite:diode-led:transistor-switch",
+      "source": "diode-led",
+      "target": "transistor-switch",
+      "type": "prerequisite"
+    },
+    {
+      "id": "prerequisite:diode-led:zener-power",
+      "source": "diode-led",
+      "target": "zener-power",
+      "type": "prerequisite"
+    },
+    {
+      "id": "prerequisite:dma-cache-mmu:memory-protection",
+      "source": "dma-cache-mmu",
+      "target": "memory-protection",
+      "type": "prerequisite"
+    },
+    {
+      "id": "prerequisite:electrical-power:power-regulators",
+      "source": "electrical-power",
+      "target": "power-regulators",
+      "type": "prerequisite"
+    },
+    {
+      "id": "prerequisite:electrical-power:zener-power",
+      "source": "electrical-power",
+      "target": "zener-power",
+      "type": "prerequisite"
+    },
+    {
+      "id": "prerequisite:endian:pointers-structs",
+      "source": "endian",
+      "target": "pointers-structs",
+      "type": "prerequisite"
+    },
+    {
+      "id": "prerequisite:exceptions:interrupts",
+      "source": "exceptions",
+      "target": "interrupts",
+      "type": "prerequisite"
+    },
+    {
+      "id": "prerequisite:exceptions:reset-boot",
+      "source": "exceptions",
+      "target": "reset-boot",
+      "type": "prerequisite"
+    },
+    {
+      "id": "prerequisite:flash-ram:c-memory",
+      "source": "flash-ram",
+      "target": "c-memory",
+      "type": "prerequisite"
+    },
+    {
+      "id": "prerequisite:flash-ram:endian",
+      "source": "flash-ram",
+      "target": "endian",
+      "type": "prerequisite"
+    },
+    {
+      "id": "prerequisite:flash-ram:memory-bus",
+      "source": "flash-ram",
+      "target": "memory-bus",
+      "type": "prerequisite"
+    },
+    {
+      "id": "prerequisite:floating-input:pull-up",
+      "source": "floating-input",
+      "target": "pull-up",
+      "type": "prerequisite"
+    },
+    {
+      "id": "prerequisite:gpio:interrupts",
+      "source": "gpio",
+      "target": "interrupts",
+      "type": "prerequisite"
+    },
+    {
+      "id": "prerequisite:ground-reference:logic-levels",
+      "source": "ground-reference",
+      "target": "logic-levels",
+      "type": "prerequisite"
+    },
+    {
+      "id": "prerequisite:ground-reference:signals-frequency",
+      "source": "ground-reference",
+      "target": "signals-frequency",
+      "type": "prerequisite"
+    },
+    {
+      "id": "prerequisite:impedance:signal-integrity",
+      "source": "impedance",
+      "target": "signal-integrity",
+      "type": "prerequisite"
+    },
+    {
+      "id": "prerequisite:inductor:power-regulators",
+      "source": "inductor",
+      "target": "power-regulators",
+      "type": "prerequisite"
+    },
+    {
+      "id": "prerequisite:interrupts:rtos-tasks",
+      "source": "interrupts",
+      "target": "rtos-tasks",
+      "type": "prerequisite"
+    },
+    {
+      "id": "prerequisite:interrupts:timers-watchdog",
+      "source": "interrupts",
+      "target": "timers-watchdog",
+      "type": "prerequisite"
+    },
+    {
+      "id": "prerequisite:libraries:linker-map",
+      "source": "libraries",
+      "target": "linker-map",
+      "type": "prerequisite"
+    },
+    {
+      "id": "prerequisite:libraries:object-model",
+      "source": "libraries",
+      "target": "object-model",
+      "type": "prerequisite"
+    },
+    {
+      "id": "prerequisite:linker-map:debugging",
+      "source": "linker-map",
+      "target": "debugging",
+      "type": "prerequisite"
+    },
+    {
+      "id": "prerequisite:linker-map:reset-boot",
+      "source": "linker-map",
+      "target": "reset-boot",
+      "type": "prerequisite"
+    },
+    {
+      "id": "prerequisite:linux-process:android-stack",
+      "source": "linux-process",
+      "target": "android-stack",
+      "type": "prerequisite"
+    },
+    {
+      "id": "prerequisite:logic-gates:registers",
+      "source": "logic-gates",
+      "target": "registers",
+      "type": "prerequisite"
+    },
+    {
+      "id": "prerequisite:logic-levels:adc",
+      "source": "logic-levels",
+      "target": "adc",
+      "type": "prerequisite"
+    },
+    {
+      "id": "prerequisite:logic-levels:floating-input",
+      "source": "logic-levels",
+      "target": "floating-input",
+      "type": "prerequisite"
+    },
+    {
+      "id": "prerequisite:logic-levels:logic-gates",
+      "source": "logic-levels",
+      "target": "logic-gates",
+      "type": "prerequisite"
+    },
+    {
+      "id": "prerequisite:logic-levels:serial-uart",
+      "source": "logic-levels",
+      "target": "serial-uart",
+      "type": "prerequisite"
+    },
+    {
+      "id": "prerequisite:make-build:dev-environment",
+      "source": "make-build",
+      "target": "dev-environment",
+      "type": "prerequisite"
+    },
+    {
+      "id": "prerequisite:memory-bus:buses-i2c-spi",
+      "source": "memory-bus",
+      "target": "buses-i2c-spi",
+      "type": "prerequisite"
+    },
+    {
+      "id": "prerequisite:memory-bus:dma-cache-mmu",
+      "source": "memory-bus",
+      "target": "dma-cache-mmu",
+      "type": "prerequisite"
+    },
+    {
+      "id": "prerequisite:memory-bus:lcd",
+      "source": "memory-bus",
+      "target": "lcd",
+      "type": "prerequisite"
+    },
+    {
+      "id": "prerequisite:memory-bus:mmio",
+      "source": "memory-bus",
+      "target": "mmio",
+      "type": "prerequisite"
+    },
+    {
+      "id": "prerequisite:memory-protection:linux-process",
+      "source": "memory-protection",
+      "target": "linux-process",
+      "type": "prerequisite"
+    },
+    {
+      "id": "prerequisite:mmio:device-drivers",
+      "source": "mmio",
+      "target": "device-drivers",
+      "type": "prerequisite"
+    },
+    {
+      "id": "prerequisite:mmio:dma-cache-mmu",
+      "source": "mmio",
+      "target": "dma-cache-mmu",
+      "type": "prerequisite"
+    },
+    {
+      "id": "prerequisite:mmio:gpio",
+      "source": "mmio",
+      "target": "gpio",
+      "type": "prerequisite"
+    },
+    {
+      "id": "prerequisite:mmio:lcd",
+      "source": "mmio",
+      "target": "lcd",
+      "type": "prerequisite"
+    },
+    {
+      "id": "prerequisite:ohms-law:capacitor",
+      "source": "ohms-law",
+      "target": "capacitor",
+      "type": "prerequisite"
+    },
+    {
+      "id": "prerequisite:ohms-law:diode-led",
+      "source": "ohms-law",
+      "target": "diode-led",
+      "type": "prerequisite"
+    },
+    {
+      "id": "prerequisite:ohms-law:electrical-power",
+      "source": "ohms-law",
+      "target": "electrical-power",
+      "type": "prerequisite"
+    },
+    {
+      "id": "prerequisite:ohms-law:pull-up",
+      "source": "ohms-law",
+      "target": "pull-up",
+      "type": "prerequisite"
+    },
+    {
+      "id": "prerequisite:ohms-law:series-parallel",
+      "source": "ohms-law",
+      "target": "series-parallel",
+      "type": "prerequisite"
+    },
+    {
+      "id": "prerequisite:open-drain:buses-i2c-spi",
+      "source": "open-drain",
+      "target": "buses-i2c-spi",
+      "type": "prerequisite"
+    },
+    {
+      "id": "prerequisite:open-drain:gpio",
+      "source": "open-drain",
+      "target": "gpio",
+      "type": "prerequisite"
+    },
+    {
+      "id": "prerequisite:pointers-structs:object-model",
+      "source": "pointers-structs",
+      "target": "object-model",
+      "type": "prerequisite"
+    },
+    {
+      "id": "prerequisite:porting-bsp:device-drivers",
+      "source": "porting-bsp",
+      "target": "device-drivers",
+      "type": "prerequisite"
+    },
+    {
+      "id": "prerequisite:power-regulators:charge-pump",
+      "source": "power-regulators",
+      "target": "charge-pump",
+      "type": "prerequisite"
+    },
+    {
+      "id": "prerequisite:pull-down:pull-sizing",
+      "source": "pull-down",
+      "target": "pull-sizing",
+      "type": "prerequisite"
+    },
+    {
+      "id": "prerequisite:pull-sizing:open-drain",
+      "source": "pull-sizing",
+      "target": "open-drain",
+      "type": "prerequisite"
+    },
+    {
+      "id": "prerequisite:pull-up:pull-down",
+      "source": "pull-up",
+      "target": "pull-down",
+      "type": "prerequisite"
+    },
+    {
+      "id": "prerequisite:pull-up:switch-debounce",
+      "source": "pull-up",
+      "target": "switch-debounce",
+      "type": "prerequisite"
+    },
+    {
+      "id": "prerequisite:queues:dynamic-allocation",
+      "source": "queues",
+      "target": "dynamic-allocation",
+      "type": "prerequisite"
+    },
+    {
+      "id": "prerequisite:rc-filter:decoupling",
+      "source": "rc-filter",
+      "target": "decoupling",
+      "type": "prerequisite"
+    },
+    {
+      "id": "prerequisite:rc-filter:impedance",
+      "source": "rc-filter",
+      "target": "impedance",
+      "type": "prerequisite"
+    },
+    {
+      "id": "prerequisite:rc-filter:switch-debounce",
+      "source": "rc-filter",
+      "target": "switch-debounce",
+      "type": "prerequisite"
+    },
+    {
+      "id": "prerequisite:rc-transient:pull-sizing",
+      "source": "rc-transient",
+      "target": "pull-sizing",
+      "type": "prerequisite"
+    },
+    {
+      "id": "prerequisite:rc-transient:rc-filter",
+      "source": "rc-transient",
+      "target": "rc-filter",
+      "type": "prerequisite"
+    },
+    {
+      "id": "prerequisite:registers:arm-context",
+      "source": "registers",
+      "target": "arm-context",
+      "type": "prerequisite"
+    },
+    {
+      "id": "prerequisite:registers:core-soc",
+      "source": "registers",
+      "target": "core-soc",
+      "type": "prerequisite"
+    },
+    {
+      "id": "prerequisite:registers:mmio",
+      "source": "registers",
+      "target": "mmio",
+      "type": "prerequisite"
+    },
+    {
+      "id": "prerequisite:registers:timing",
+      "source": "registers",
+      "target": "timing",
+      "type": "prerequisite"
+    },
+    {
+      "id": "prerequisite:reset-boot:porting-bsp",
+      "source": "reset-boot",
+      "target": "porting-bsp",
+      "type": "prerequisite"
+    },
+    {
+      "id": "prerequisite:reset-boot:rtos-tasks",
+      "source": "reset-boot",
+      "target": "rtos-tasks",
+      "type": "prerequisite"
+    },
+    {
+      "id": "prerequisite:rtos-tasks:linux-process",
+      "source": "rtos-tasks",
+      "target": "linux-process",
+      "type": "prerequisite"
+    },
+    {
+      "id": "prerequisite:rtos-tasks:queues",
+      "source": "rtos-tasks",
+      "target": "queues",
+      "type": "prerequisite"
+    },
+    {
+      "id": "prerequisite:rtos-tasks:scheduler",
+      "source": "rtos-tasks",
+      "target": "scheduler",
+      "type": "prerequisite"
+    },
+    {
+      "id": "prerequisite:scheduler:porting-bsp",
+      "source": "scheduler",
+      "target": "porting-bsp",
+      "type": "prerequisite"
+    },
+    {
+      "id": "prerequisite:scheduler:synchronization",
+      "source": "scheduler",
+      "target": "synchronization",
+      "type": "prerequisite"
+    },
+    {
+      "id": "prerequisite:scheduler:timers-watchdog",
+      "source": "scheduler",
+      "target": "timers-watchdog",
+      "type": "prerequisite"
+    },
+    {
+      "id": "prerequisite:serial-uart:usb-basics",
+      "source": "serial-uart",
+      "target": "usb-basics",
+      "type": "prerequisite"
+    },
+    {
+      "id": "prerequisite:series-parallel:voltage-divider",
+      "source": "series-parallel",
+      "target": "voltage-divider",
+      "type": "prerequisite"
+    },
+    {
+      "id": "prerequisite:signals-frequency:clocks-pll",
+      "source": "signals-frequency",
+      "target": "clocks-pll",
+      "type": "prerequisite"
+    },
+    {
+      "id": "prerequisite:signals-frequency:pwm",
+      "source": "signals-frequency",
+      "target": "pwm",
+      "type": "prerequisite"
+    },
+    {
+      "id": "prerequisite:signals-frequency:rc-filter",
+      "source": "signals-frequency",
+      "target": "rc-filter",
+      "type": "prerequisite"
+    },
+    {
+      "id": "prerequisite:signals-frequency:timing",
+      "source": "signals-frequency",
+      "target": "timing",
+      "type": "prerequisite"
+    },
+    {
+      "id": "prerequisite:timers-watchdog:debugging",
+      "source": "timers-watchdog",
+      "target": "debugging",
+      "type": "prerequisite"
+    },
+    {
+      "id": "prerequisite:timing:clocks-pll",
+      "source": "timing",
+      "target": "clocks-pll",
+      "type": "prerequisite"
+    },
+    {
+      "id": "prerequisite:timing:memory-bus",
+      "source": "timing",
+      "target": "memory-bus",
+      "type": "prerequisite"
+    },
+    {
+      "id": "prerequisite:timing:serial-uart",
+      "source": "timing",
+      "target": "serial-uart",
+      "type": "prerequisite"
+    },
+    {
+      "id": "prerequisite:timing:signal-integrity",
+      "source": "timing",
+      "target": "signal-integrity",
+      "type": "prerequisite"
+    },
+    {
+      "id": "prerequisite:transistor-switch:open-drain",
+      "source": "transistor-switch",
+      "target": "open-drain",
+      "type": "prerequisite"
+    },
+    {
+      "id": "prerequisite:transistor-switch:pwm",
+      "source": "transistor-switch",
+      "target": "pwm",
+      "type": "prerequisite"
+    },
+    {
+      "id": "prerequisite:transistor-switch:transistor-amplifier",
+      "source": "transistor-switch",
+      "target": "transistor-amplifier",
+      "type": "prerequisite"
+    },
+    {
+      "id": "prerequisite:voltage-divider:adc",
+      "source": "voltage-divider",
+      "target": "adc",
+      "type": "prerequisite"
+    },
+    {
+      "id": "prerequisite:voltage-divider:impedance",
+      "source": "voltage-divider",
+      "target": "impedance",
+      "type": "prerequisite"
+    },
+    {
+      "id": "prerequisite:voltage-divider:transistor-amplifier",
+      "source": "voltage-divider",
+      "target": "transistor-amplifier",
+      "type": "prerequisite"
+    }
+  ]
+}

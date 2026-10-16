@@ -1,0 +1,28 @@
+{
+  "schema_version": 1,
+  "diagram_type": "architecture",
+  "meta": {
+    "title": "Embedded Atlas · 유지보수 구조",
+    "quality_profile": "showcase",
+    "viewBox": [1220, 780]
+  },
+  "components": [
+    { "id": "article_inventory", "type": "external", "label": "출처 목록", "sublabel": "발견 · 검토 · 접근 제한", "pos": [70, 90], "size": [220, 86] },
+    { "id": "lesson_contract", "type": "database", "label": "한국어 학습 데이터", "sublabel": "src/data/lessons.js", "pos": [470, 90], "size": [220, 86] },
+    { "id": "quality_gate", "type": "security", "label": "회귀 하네스", "sublabel": "스키마 · DAG · 수치 불변식", "pos": [870, 90], "size": [220, 86] },
+    { "id": "static_build", "type": "backend", "label": "Vite 정적 빌드", "sublabel": "npm run check", "pos": [870, 350], "size": [220, 86] },
+    { "id": "pages_host", "type": "cloud", "label": "GitHub Pages", "sublabel": "/embedded/", "pos": [870, 610], "size": [220, 86] },
+    { "id": "browser_ui", "type": "frontend", "label": "시각화 학습 화면", "sublabel": "SVG · 퀴즈 · 학습 기록", "pos": [470, 610], "size": [220, 86] },
+    { "id": "physics_models", "type": "backend", "label": "결정적 전기 모델", "sublabel": "src/sim/ · SI 단위", "pos": [70, 610], "size": [220, 86] },
+    { "id": "knowledge_graph", "type": "database", "label": "선수 지식 그래프", "sublabel": "public/data/knowledge-graph.json", "pos": [470, 350], "size": [220, 86] }
+  ],
+  "connections": [
+    { "id": "cite_articles", "from": "article_inventory", "to": "lesson_contract", "label": "검토 · 인용", "variant": "emphasis" },
+    { "id": "check_lessons", "from": "lesson_contract", "to": "quality_gate", "label": "계약 검사", "variant": "emphasis" },
+    { "id": "gate_build", "from": "quality_gate", "to": "static_build", "label": "검증 통과", "variant": "emphasis", "labelDy": 24 },
+    { "id": "deploy_static", "from": "static_build", "to": "pages_host", "label": "Actions 배포", "variant": "emphasis", "labelDy": 24 },
+    { "id": "serve_assets", "from": "pages_host", "to": "browser_ui", "label": "정적 자산 제공", "variant": "emphasis" },
+    { "id": "simulate_locally", "from": "physics_models", "to": "browser_ui", "label": "브라우저 계산" },
+    { "id": "derive_graph", "from": "lesson_contract", "to": "knowledge_graph", "label": "선수 관계 생성", "labelDy": 24 }
+  ]
+}

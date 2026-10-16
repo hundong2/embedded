@@ -1,0 +1,11 @@
+node_modules/
+dist/
+.cache/
+artifacts/
+playwright-report/
+test-results/
+public/architecture.html
+public/data/
+docs/architecture.json
+docs/architecture-receipt.json
+package-lock.json
