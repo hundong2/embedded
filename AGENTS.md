@@ -19,6 +19,7 @@ Build a Korean, visualization-first electronics and embedded-systems learning si
 - GitHub Actions validates before deploying the static Vite build to Pages.
 
 ## Physics invariants
+- Teach beginners with both source terminals and the complete physical return wire visible before introducing VCC/GND abbreviations. Distinguish GPIO node voltage from the resistor's two-terminal voltage drop.
 - Conventional current follows decreasing potential along a closed circuit. Electron motion is opposite; animation is schematic, never actual carrier speed.
 - Ground is the 0 V reference/return node, not a charge sink. Moving a ground label changes measured reference, not physical current.
 - Open switches break the affected path. Switch location is topology, not a magic direction reversal.

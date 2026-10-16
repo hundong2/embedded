@@ -1,6 +1,7 @@
 import './styles.css';
 import { icon, escapeHTML as esc } from './icons.js';
 import { experiments, mountExperiment } from './experiments.js';
+import { mountFoundations } from './foundations.js';
 import { lessons } from './data/lessons.js';
 
 const base = import.meta.env.BASE_URL;
@@ -246,11 +247,21 @@ function renderLab(c) {
     ],
   ];
   c.innerHTML =
+    (['pull', 'current'].includes(activeExperiment) ? '<div data-foundations-host></div>' : '') +
     heading('01', '직접 해 보는 회로 실험실', '한 번의 조작, 하나의 새로운 이해') +
     `<div class="experiment-switcher" role="group" aria-label="실험 선택">${experiments.map((e) => `<button class="experiment-chip ${e.id === activeExperiment ? 'active' : ''}" data-experiment="${e.id}" aria-pressed="${e.id === activeExperiment}">${icon(e.icon)}${e.title}</button>`).join('')}</div><div data-experiment-host></div>` +
     heading('02', '이 실험에서 이해할 것', '원리를 연결하면 응용이 쉬워집니다') +
     `<div class="understand-grid">${cards.map(([ico, t, p], i) => `<article class="insight"><div class="insight-top"><span class="insight-icon">${icon(ico)}</span><span class="insight-number">0${i + 1}</span></div><h3>${t}</h3><p>${p}</p><button class="text-button" data-related="${activeExperiment}" data-related-index="${i}">개념 더 알아보기 ${icon('arrow')}</button></article>`).join('')}</div><div class="continue-banner"><div class="banner-icon">${icon('map')}</div><div><h3>실험의 발견을, 단단한 기초 지식으로.</h3><p>전기부터 임베디드 소프트웨어까지, 연결된 학습 경로를 따라가 보세요.</p></div><button data-nav="roadmap">학습 로드맵 보기 →</button></div>`;
-  cleanup = mountExperiment(c.querySelector('[data-experiment-host]'), activeExperiment);
+  const stopExperiment = mountExperiment(
+    c.querySelector('[data-experiment-host]'),
+    activeExperiment,
+  );
+  const foundationHost = c.querySelector('[data-foundations-host]');
+  const stopFoundation = foundationHost ? mountFoundations(foundationHost) : () => {};
+  cleanup = () => {
+    stopExperiment();
+    stopFoundation();
+  };
 }
 function renderCatalog(c) {
   c.innerHTML = `<label class="search-box">${icon('search')}<input type="search" data-search placeholder="어떤 개념이 궁금한가요?" aria-label="강의 검색" value="${esc(query)}"></label><div class="filter-row" role="group" aria-label="강의 분류">${[{ id: 'all', short: '전체' }, ...categories].map((cat) => `<button class="filter-chip ${filter === cat.id ? 'active' : ''}" data-filter="${cat.id}" aria-pressed="${filter === cat.id}">${cat.short}</button>`).join('')}</div><div class="lesson-count" data-lesson-count aria-live="polite"></div><div class="lesson-grid" data-lesson-grid></div>`;

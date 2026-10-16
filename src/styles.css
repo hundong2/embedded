@@ -102,6 +102,7 @@ small {
   font-size: 12px;
 }
 .skip-link {
+  opacity: 0;
   position: fixed;
   top: -80px;
   left: 20px;
@@ -110,6 +111,7 @@ small {
   padding: 15px;
 }
 .skip-link:focus {
+  opacity: 1;
   top: 10px;
 }
 .layout {
@@ -2235,4 +2237,220 @@ main {
 }
 .external-panel[open] summary {
   margin-bottom: 14px;
+}
+.foundation {
+  margin-bottom: 28px;
+  background: #fff;
+  border: 1px solid var(--line);
+  border-radius: 13px;
+  padding: 22px;
+  overflow: hidden;
+}
+.foundation-heading {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  flex-wrap: wrap;
+}
+.foundation-heading .section-index {
+  font-size: 9px;
+  color: var(--purple);
+  background: var(--purple-light);
+  padding: 6px 8px;
+  border-radius: 5px;
+  letter-spacing: 0.8px;
+}
+.foundation-heading h2 {
+  font-size: 17px;
+  margin: 0;
+  line-height: 1.7;
+}
+.foundation-intro {
+  font-size: 12px;
+  color: #778197;
+  margin: 10px 0 18px;
+}
+.foundation h2,
+.foundation h3,
+.foundation p {
+  word-break: keep-all;
+  overflow-wrap: anywhere;
+}
+.foundation-steps {
+  display: flex;
+  gap: 7px;
+  margin-bottom: 20px;
+}
+.foundation-steps button {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  flex: 1;
+  text-align: left;
+  padding: 11px 13px;
+  background: #f7f7fc;
+  border-radius: 7px;
+  color: #81869f;
+  font-size: 11px;
+}
+.foundation-steps button > span {
+  font-size: 10px;
+  color: #a09ab7;
+}
+.foundation-steps button[aria-pressed='true'] {
+  background: var(--purple-light);
+  color: var(--purple);
+  font-weight: 600;
+}
+.foundation-steps button[aria-pressed='true'] > span {
+  color: var(--purple);
+}
+.foundation-body {
+  display: grid;
+  grid-template-columns: minmax(0, 1fr) 265px;
+  gap: 24px;
+  align-items: center;
+}
+.foundation-stage {
+  min-width: 0;
+}
+.foundation-svg {
+  width: 100%;
+  height: auto;
+}
+.foundation-legend {
+  font-size: 10px;
+  color: #7e859a;
+  text-align: center;
+  margin-top: 5px;
+}
+.foundation-explanation h3 {
+  font-size: 17px;
+  line-height: 1.8;
+  color: #4c486f;
+  margin-bottom: 12px;
+}
+.foundation-explanation > p {
+  font-size: 13px;
+  color: #707b91;
+  line-height: 2;
+}
+.foundation-actions {
+  display: grid;
+  gap: 10px;
+  margin: 18px 0;
+}
+.foundation-actions .switch-button {
+  font-size: 12px;
+  padding: 12px;
+}
+.foundation-return {
+  font-size: 12px;
+  color: #786a9d;
+  background: #f7f5fb;
+  border: 1px solid #e5dfee;
+  border-radius: 7px;
+  padding: 12px;
+  text-align: center;
+}
+.foundation-actions .primary-button {
+  justify-content: center;
+  font-size: 11px;
+}
+.foundation-explanation .foundation-state {
+  font-size: 11px;
+  color: #827690;
+  background: #f7f5fa;
+  border-radius: 6px;
+  padding: 10px 12px;
+  line-height: 1.9;
+  margin: 0;
+}
+.foundation-conclusion {
+  margin: 19px 0 0;
+  padding-top: 16px;
+  border-top: 1px solid #f0edf6;
+  font-size: 12px;
+  color: #7c7197;
+  line-height: 1.9;
+}
+@media (max-width: 1100px) {
+  .foundation-body {
+    grid-template-columns: minmax(0, 1fr);
+  }
+  .foundation-explanation {
+    max-width: none;
+  }
+  .foundation-svg {
+    max-height: 330px;
+  }
+  .foundation-explanation h3 {
+    font-size: 15px;
+  }
+  .foundation-actions {
+    display: flex;
+    flex-wrap: wrap;
+  }
+  .foundation-actions > button {
+    flex: 1;
+    min-width: 180px;
+  }
+  .foundation-steps button {
+    font-size: 10px;
+    padding: 10px;
+  }
+}
+@media (max-width: 760px) {
+  .foundation {
+    padding: 17px;
+    margin-bottom: 24px;
+  }
+  .foundation-heading h2 {
+    font-size: 16px;
+  }
+  .foundation-intro {
+    font-size: 12px;
+    line-height: 1.9;
+  }
+  .foundation-body {
+    gap: 20px;
+  }
+  .foundation-steps {
+    gap: 5px;
+  }
+  .foundation-steps button {
+    display: block;
+    font-size: 11px;
+    line-height: 1.7;
+    padding: 9px 8px;
+  }
+  .foundation-steps button > span {
+    display: block;
+    font-size: 10px;
+    margin-bottom: 4px;
+  }
+  .foundation .foundation-svg .small {
+    font-size: 20px;
+  }
+  .foundation .foundation-svg .label {
+    font-size: 22px;
+  }
+  .foundation .foundation-svg .value {
+    font-size: 30px;
+  }
+  .foundation-explanation > p {
+    font-size: 13px;
+  }
+  .foundation-actions {
+    display: grid;
+  }
+  .foundation-actions > button {
+    min-width: 0;
+  }
+  .foundation-conclusion {
+    font-size: 12px;
+  }
+  .foundation-legend {
+    font-size: 10px;
+  }
 }

@@ -1,6 +1,6 @@
 {
   "schemaVersion": 1,
-  "verifiedAt": "2026-10-16T13:03:59.517Z",
+  "verifiedAt": "2026-10-16T13:27:37.309Z",
   "commands": {
     "npm run validate:content": "passed",
     "node scripts/build-graph.mjs --check": "passed",
@@ -14,8 +14,8 @@
   "curriculum": {
     "lessons": 72,
     "visuals": 72,
-    "visualNodes": 286,
-    "visualEdges": 231
+    "visualNodes": 290,
+    "visualEdges": 238
   },
   "inventory": {
     "path": "public/data/source-manifest.json",
@@ -60,13 +60,18 @@
   "productBrowserEvidence": {
     "source": "Parent task QA report",
     "fullSuite": {
-      "passed": 18,
+      "passed": 20,
       "failed": 0,
-      "scope": "72 lesson deep links on desktop and 390 px mobile plus keyboard, reduced-motion, persistence, routing and experiment journeys"
+      "scope": "72 lesson deep links on desktop and 390 px mobile, all experiments, keyboard, reduced motion, persistence, and a beginner full-loop/source-return walkthrough"
     },
     "targetedSourcePanel": {
       "passed": 2,
       "failed": 0
+    },
+    "targetedBeginnerWalkthrough": {
+      "passed": 2,
+      "failed": 0,
+      "scope": "Both source terminals, intact/broken return, switch/return independent conditions, native keyboard controls, skip-link focus, desktop and mobile visual review"
     }
   },
   "knownSourceLimits": {

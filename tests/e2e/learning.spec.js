@@ -25,7 +25,7 @@ test('pull resistor truth table and floating state are observable', async ({ pag
   await expect(metrics).toContainText('FLOATING');
   await expect(metrics).toContainText('?');
   await expect(page.locator('[data-observation]')).toContainText('정해지지');
-  await expect(page.locator('.circuit-svg')).toHaveAccessibleName(/GPIO FLOATING/);
+  await expect(page.locator('.circuit-stage .circuit-svg')).toHaveAccessibleName(/GPIO FLOATING/);
   expect(errors).toEqual([]);
 });
 
@@ -202,4 +202,41 @@ test('pull resistance and leakage explain an undefined idle input', async ({ pag
   await expect(page.locator('[data-metrics]')).toContainText('HIGH');
   await page.locator('[data-toggle="closed"]').click();
   await expect(page.locator('[data-metrics]')).toContainText('LOW');
+});
+
+test('beginner walkthrough shows both power terminals and requires an intact return wire', async ({
+  page,
+  isMobile,
+}) => {
+  await page.goto('./');
+  await page.keyboard.press('Tab');
+  await expect(page.locator('.skip-link')).toBeFocused();
+  await expect(page.locator('.skip-link')).toHaveCSS('opacity', '1');
+  await page.keyboard.press('Enter');
+  await expect(page.locator('#main-content')).toBeFocused();
+  const foundation = page.getByRole('region', { name: '전류와 그라운드 첫걸음' });
+  await expect(foundation).toBeVisible();
+  await expect(foundation.locator('[data-foundation-state]')).toContainText('0.00 mA');
+  await foundation.locator('[data-f-next]').click();
+  await foundation.locator('[data-f-switch]').click();
+  await expect(foundation.locator('[data-foundation-state]')).toContainText('0.33 mA');
+  await expect(foundation.locator('.foundation-svg')).toHaveAccessibleName(/귀환선 연결/);
+  await foundation.locator('[data-f-next]').click();
+  await expect(foundation.locator('[data-foundation-text]')).toContainText('전원 −단자');
+  if (!isMobile) await foundation.screenshot({ path: 'artifacts/ground-return.png' });
+  else await foundation.screenshot({ path: 'artifacts/ground-return-mobile.png' });
+  await foundation.locator('[data-f-return]').click();
+  await expect(foundation.locator('[data-foundation-state]')).toContainText(
+    '스위치 닫힘 · 귀환선 끊김 → 저항 전류 0.00 mA',
+  );
+  await foundation.locator('[data-f-return]').press('Enter');
+  await expect(foundation.locator('[data-foundation-state]')).toContainText('0.33 mA');
+  expect(
+    await page.evaluate(() => document.documentElement.scrollWidth <= innerWidth + 1),
+  ).toBeTruthy();
+  await expect(page.locator('[data-power-return]')).toBeAttached();
+  await page.locator('[data-toggle="closed"]').click();
+  const metrics = page.locator('[data-metrics] .metric');
+  await expect(metrics.filter({ hasText: 'GPIO 입력 전압' })).toContainText('0.00');
+  await expect(metrics.filter({ hasText: '저항 양단 전압' })).toContainText('3.30');
 });

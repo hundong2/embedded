@@ -216,6 +216,10 @@ export function mountExperiment(container, kind = 'pull') {
       drawing = svgWrap(
         `${state.mode} ${state.closed ? '스위치 닫힘' : '스위치 열림'}, GPIO ${m.logic}, ${volt}`,
         `
+        <path class="wire" data-power-supply d="M65 130V48H${state.mode === 'none' ? 105 : 155}"/>
+        <path class="wire" data-power-return d="M155 268H65V210"/>
+        <rect class="component" x="35" y="130" width="60" height="80" rx="8"/>
+        <text class="label" x="65" y="149" text-anchor="middle">+</text><text class="label" x="65" y="175" text-anchor="middle">3.3 V</text><text class="label" x="65" y="198" text-anchor="middle">−</text>
         <text class="label" x="155" y="39" text-anchor="middle">${top}</text>
         ${state.mode !== 'none' ? `<path class="wire ${state.closed ? 'energized' : ''}" d="M155 48V${up ? 70 : 80}"/>` : ''}
         ${up ? `${resistor(155, rY, true, ohms(state.resistance))}<path class="wire energized" d="M155 140v30"/>` : state.mode === 'down' ? `${switchSvg(155, swY, state.closed)}<path class="wire" d="M155 115v55"/>` : ''}
@@ -229,7 +233,7 @@ export function mountExperiment(container, kind = 'pull') {
         <text class="small" x="417" y="223" text-anchor="middle">${floating ? '전압을 정해 줄 연결이 없습니다' : '고임피던스 입력 핀'}</text>
         ${up || state.mode === 'none' ? `<path class="wire" d="M155 170v40"/>${switchSvg(155, swY, state.closed)}<path class="wire" d="M155 245v23"/>` : `<path class="wire" d="M155 170v20"/>${resistor(155, 190, true, ohms(state.resistance))}<path class="wire" d="M155 260v8"/>`}
         ${ground(155, 268)}<text class="small" x="218" y="${swY + 24}">${state.closed ? '스위치 닫힘' : '스위치 열림'}</text>
-        ${state.closed && state.mode !== 'none' ? `<path class="flow ${state.electrons ? 'reverse electron' : ''}" d="M155 49V268"/><text class="small" x="61" y="172" text-anchor="middle">${amperes(m.current)}</text>` : ''}
+        ${state.closed && state.mode !== 'none' ? `<path class="flow ${state.electrons ? 'reverse electron' : ''}" d="M65 130V48H155V268H65V210"/>` : ''}
         <text class="small" x="417" y="259" text-anchor="middle">HIGH ≥ 0.7 × VCC</text><text class="small" x="417" y="279" text-anchor="middle">LOW ≤ 0.3 × VCC</text>`,
       );
       control =
@@ -266,7 +270,11 @@ export function mountExperiment(container, kind = 'pull') {
           `<span class="logic-badge ${high ? '' : floating || m.logic === 'UNDEFINED' ? 'undefined' : 'low'}">${m.logic}</span>`,
         ) +
         metric('저항 전류', n(m.current * 1000, 3), 'mA') +
-        metric('저항 소비 전력', n(m.power * 1000, 3), 'mW');
+        metric(
+          '저항 양단 전압',
+          state.mode === 'none' ? '—' : n(m.current * state.resistance),
+          'V',
+        );
       title = floating
         ? '연결이 없다고 LOW가 되는 것은 아닙니다'
         : state.mode === 'none'
@@ -279,10 +287,9 @@ export function mountExperiment(container, kind = 'pull') {
         : state.mode === 'none'
           ? '닫힌 스위치가 GPIO를 GND에 직접 연결하여 LOW가 됩니다. 스위치를 놓으면 전압을 유지할 저항이 없어 다시 부동 상태입니다.'
           : state.closed
-            ? `VCC → ${up ? '저항 → 스위치' : '스위치 → 저항'} → GND로 닫힌 경로가 생깁니다. GPIO는 ${up ? 'GND' : 'VCC'}에 연결되어 ${up ? 'LOW' : 'HIGH'}가 되고, ${ohms(state.resistance)} 저항이 전류를 ${amperes(m.current)}로 제한합니다.`
+            ? `전원 + → ${up ? '저항 → 스위치' : '스위치 → 저항'} → GND 도선 → 전원 −로 한 바퀴 이어집니다. GPIO는 ${up ? '전원 −와 이어진 0 V 선' : '전원 +'}에 연결되어 ${up ? 'LOW' : 'HIGH'}가 됩니다. 저항 양단에 3.3 V 차이가 생겨 ${amperes(m.current)}가 흐릅니다.`
             : `스위치가 열려도 GPIO는 ${up ? '저항을 통해 VCC' : '저항을 통해 GND'}에 연결되어 ${up ? 'HIGH' : 'LOW'}를 읽습니다. 입력 핀으로 들어가는 전류가 거의 없어 저항의 전압 강하도 거의 0입니다.`;
-      note =
-        '3.3 V · 이상 스위치 · 기본 누설 0 A. 누설은 반대 레일 쪽 등가 전류원입니다. 임계값은 예시이며 보호 다이오드는 생략합니다.';
+      note = `저항 소비 전력 ${n(m.power * 1000, 3)} mW. 이상 스위치 · 기본 누설 0 A. 누설은 반대 레일 쪽 등가 전류원이며 임계값은 예시입니다.`;
       if (state.leakage && !state.closed && state.mode !== 'none') {
         title = '풀 저항이 너무 크면 누설의 영향도 커집니다';
         observation = `스위치를 놓아도 ${state.leakage} µA의 누설 경로가 있습니다. 저항에서 I누설 × R = ${n(state.leakage * 1e-6 * state.resistance)} V가 떨어져 GPIO는 ${n(m.voltage)} V, ${m.logic}가 됩니다. 저항을 키워 문턱 사이의 미정 영역에 들어가는지 관찰하세요. 점선 가지는 누설의 등가 모델입니다.`;
