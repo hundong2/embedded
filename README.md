@@ -1,8 +1,8 @@
 # Embedded Atlas
 
-전류의 경로를 직접 보고 조작하며 배우는 한국어 전기·전자·임베디드 기초 학습실입니다.
+> **학습 사이트 바로가기: [https://hundong2.github.io/embedded/](https://hundong2.github.io/embedded/)**
 
-**사이트:** https://hundong2.github.io/embedded/
+전류의 경로를 직접 보고 조작하며 배우는 한국어 전기·전자·임베디드 기초 학습실입니다.
 
 ## 무엇을 배울 수 있나요?
 
