@@ -51,6 +51,8 @@ node scripts/build-graph.mjs --check
 
 ## 회귀 하네스
 
+GitHub Actions는 검토한 공식 릴리스의 커밋 해시를 고정한다. checkout v7.0.1, setup-node v7.1.0, upload-artifact v7.0.2, upload-pages-artifact v5.0.0, deploy-pages v5.0.1을 사용한다. Node 24 기반 Action 런타임과 애플리케이션의 Node 22 빌드 환경을 구분하며, CI 운영체제는 Ubuntu 24.04로 고정한다. 버전 변경 시 공식 릴리스와 런타임 요구 조건을 확인하고 같은 검증을 다시 실행한다.
+
 ```sh
 npm ci
 npm run check
